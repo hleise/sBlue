@@ -49,7 +49,7 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
     }
     
     // If not already connected to a peripheral, then connect to this one
-//    if ((self.peripheralBLE == nil) || (self.peripheralBLE?.state == CBPeripheralState.Disconnected)) {
+    if ((self.peripheralBLE == nil) || (self.peripheralBLE?.state == CBPeripheralState.Disconnected)) {
       // Retain the peripheral before trying to connect
       self.peripheralBLE = peripheral
       
@@ -58,7 +58,7 @@ class BTDiscovery: NSObject, CBCentralManagerDelegate {
       
       // Connect to peripheral
       central.connectPeripheral(peripheral, options: nil)
-//    }
+    }
   }
   
   func centralManager(central: CBCentralManager, didConnectPeripheral peripheral: CBPeripheral) {

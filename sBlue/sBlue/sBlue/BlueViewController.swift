@@ -26,16 +26,8 @@ class BlueViewController: UIViewController {
     override func viewWillAppear(animated: Bool)
     {
         print("selected characteristic: \(selectedCharacteristic)")
-        if selectedCharacteristic != nil {
-            if selectedCharacteristic == 1 {
-                selectedCharUUID = PositionCharUUID
-            } else if selectedCharacteristic == 2 {
-                selectedCharUUID = PositionCharUUID1
-            } else if selectedCharacteristic == 3 {
-                selectedCharUUID = PositionCharUUID2
-            } else if selectedCharacteristic == 4 {
-                selectedCharUUID = PositionCharUUID3
-            }
+        if self.selectedCharacteristic != nil {
+            chosenCharacteristic = selectedCharacteristic
         }
         
         // Watch Bluetooth connection
@@ -51,7 +43,7 @@ class BlueViewController: UIViewController {
     
     //deinit called right before MVC leaves the heap
     deinit {
-        btDiscoverySharedInstance.bleService?.reset()
+        //btDiscoverySharedInstance.bleService?.reset()
         print("deallocated")
         NSNotificationCenter.defaultCenter().removeObserver(self, name: BLEServiceChangedStatusNotification, object: nil)
         
