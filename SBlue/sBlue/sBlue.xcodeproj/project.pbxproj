@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		DF7061F01D1E05C000329380 /* BlueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7061EF1D1E05C000329380 /* BlueModel.swift */; };
 		DF7061F21D1E080C00329380 /* BlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7061F11D1E080C00329380 /* BlueView.swift */; };
+		DFE2E65E1D283C6100793F44 /* BTDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE2E65C1D283C6100793F44 /* BTDiscovery.swift */; };
+		DFE2E65F1D283C6100793F44 /* BTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE2E65D1D283C6100793F44 /* BTService.swift */; };
+		DFE2E6621D287FBF00793F44 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE2E6611D287FBF00793F44 /* HomeViewController.swift */; };
 		DFE970F91CFB42CA00B8F474 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE970F81CFB42CA00B8F474 /* AppDelegate.swift */; };
 		DFE970FB1CFB42CA00B8F474 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE970FA1CFB42CA00B8F474 /* BlueViewController.swift */; };
 		DFE970FE1CFB42CA00B8F474 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE970FC1CFB42CA00B8F474 /* Main.storyboard */; };
@@ -39,6 +42,9 @@
 /* Begin PBXFileReference section */
 		DF7061EF1D1E05C000329380 /* BlueModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueModel.swift; sourceTree = "<group>"; };
 		DF7061F11D1E080C00329380 /* BlueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueView.swift; sourceTree = "<group>"; };
+		DFE2E65C1D283C6100793F44 /* BTDiscovery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTDiscovery.swift; sourceTree = "<group>"; };
+		DFE2E65D1D283C6100793F44 /* BTService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTService.swift; sourceTree = "<group>"; };
+		DFE2E6611D287FBF00793F44 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DFE970F51CFB42CA00B8F474 /* sBlue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sBlue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE970F81CFB42CA00B8F474 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFE970FA1CFB42CA00B8F474 /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +98,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DFE2E6601D283C6500793F44 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DFE2E65D1D283C6100793F44 /* BTService.swift */,
+				DFE2E65C1D283C6100793F44 /* BTDiscovery.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		DFE970EC1CFB42CA00B8F474 = {
 			isa = PBXGroup;
 			children = (
@@ -115,9 +130,11 @@
 		DFE970F71CFB42CA00B8F474 /* sBlue */ = {
 			isa = PBXGroup;
 			children = (
+				DFE2E6601D283C6500793F44 /* Classes */,
 				DF7061EE1D1E052700329380 /* Supporting Files */,
 				DFE970FA1CFB42CA00B8F474 /* BlueViewController.swift */,
 				DFE970FC1CFB42CA00B8F474 /* Main.storyboard */,
+				DFE2E6611D287FBF00793F44 /* HomeViewController.swift */,
 				DF7061F11D1E080C00329380 /* BlueView.swift */,
 				DF7061EF1D1E05C000329380 /* BlueModel.swift */,
 			);
@@ -279,7 +296,10 @@
 				DFE970FB1CFB42CA00B8F474 /* BlueViewController.swift in Sources */,
 				DFE971011CFB42CA00B8F474 /* sBlue.xcdatamodeld in Sources */,
 				DFE970F91CFB42CA00B8F474 /* AppDelegate.swift in Sources */,
+				DFE2E6621D287FBF00793F44 /* HomeViewController.swift in Sources */,
 				DF7061F01D1E05C000329380 /* BlueModel.swift in Sources */,
+				DFE2E65F1D283C6100793F44 /* BTService.swift in Sources */,
+				DFE2E65E1D283C6100793F44 /* BTDiscovery.swift in Sources */,
 				DF7061F21D1E080C00329380 /* BlueView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,7 +446,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = sBlue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sinnplyBlue.sBlue;
+				PRODUCT_BUNDLE_IDENTIFIER = sinnplyBlue.sBlue2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -437,7 +457,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = sBlue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sinnplyBlue.sBlue;
+				PRODUCT_BUNDLE_IDENTIFIER = sinnplyBlue.sBlue2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
