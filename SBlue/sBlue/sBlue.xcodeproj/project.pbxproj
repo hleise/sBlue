@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -227,7 +227,7 @@
 				TargetAttributes = {
 					DFE970F41CFB42CA00B8F474 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = N4H238ZMS2;
+						DevelopmentTeam = BYM24BWNEV;
 					};
 					DFE9710B1CFB42CA00B8F474 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -242,7 +242,7 @@
 				};
 			};
 			buildConfigurationList = DFE970F01CFB42CA00B8F474 /* Build configuration list for PBXProject "sBlue" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -444,10 +444,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = sBlue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sinnplyBlue.sBlue2;
+				PRODUCT_BUNDLE_IDENTIFIER = sinnplyBlue.andresrubiop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -455,10 +458,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = sBlue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sinnplyBlue.sBlue2;
+				PRODUCT_BUNDLE_IDENTIFIER = sinnplyBlue.andresrubiop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
