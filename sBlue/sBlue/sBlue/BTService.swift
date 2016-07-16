@@ -120,16 +120,11 @@ class BTService: NSObject, CBPeripheralDelegate {
             if let blueCharacteristic = self.blueCharacteristics[chosenCharacteristic!] {
                 // Need a mutable var to pass to writeValue function
                 //little endian
-                var positionValue = 0
-                if (code == 1) {
-                    positionValue = 84017665
-                }
-                if (code == 2) {
-                    positionValue = 84017409
-                }
+                
+                var codeValue = code
                 
                 //Keep this as UInt8 in NSData
-                let data = NSData(bytes: &positionValue, length: sizeof(UInt8))
+                let data = NSData(bytes: &codeValue, length: sizeof(UInt8))
                 
                 //without response for Arduino Uno
                 //with response for Arduino 101

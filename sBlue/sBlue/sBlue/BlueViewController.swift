@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BlueViewController: UIViewController {
+class BlueViewController: UIViewController, UITextFieldDelegate {
     
     var timerTXDelay: NSTimer?
     var allowTX = true
@@ -16,10 +16,7 @@ class BlueViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
-        
+        textbox.delegate = self //set delegate to self
     }
     
     
@@ -134,6 +131,11 @@ class BlueViewController: UIViewController {
         
         timerTXDelay?.invalidate()
         self.timerTXDelay = nil
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
 }

@@ -9,7 +9,6 @@
         <!--Navigation Controller-->
         <scene sceneID="9QJ-pF-7Cp">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sUi-Mr-rwX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="ame-aE-DvG" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zym-gJ-072">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -19,6 +18,7 @@
                         <segue destination="kwB-sI-HAP" kind="relationship" relationship="rootViewController" id="UeG-wL-zCk"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sUi-Mr-rwX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1194" y="115"/>
         </scene>
@@ -40,7 +40,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disconnected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spm-kc-xfr">
                                         <rect key="frame" x="247" y="343" width="106" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UqI-BZ-OgA">
@@ -85,7 +85,7 @@
             </objects>
             <point key="canvasLocation" x="380" y="325"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="mlH-Sp-0Sb">
             <objects>
                 <viewController id="kwB-sI-HAP" customClass="HomeViewController" customModule="sBlue" customModuleProvider="target" sceneMemberID="viewController">
@@ -138,7 +138,7 @@
                             <constraint firstItem="4cs-1e-jPR" firstAttribute="top" secondItem="6uc-Gl-vxu" secondAttribute="bottom" constant="8" symbolic="YES" id="zSA-PW-xjs"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="s6d-HA-1Vv"/>
+                    <navigationItem key="navigationItem" title="Home" id="s6d-HA-1Vv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gdd-HX-Fqz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

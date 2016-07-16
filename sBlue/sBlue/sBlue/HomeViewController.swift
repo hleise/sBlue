@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
                 case "Show Gestures":
                         vc.selectedCharacteristic = 1
                         print("1")
-                case "Show Elements":
+       1         case "Show Elements":
                         vc.selectedCharacteristic = 2
                         print("2")
                 case "Show Profile":
