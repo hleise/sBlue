@@ -19,7 +19,7 @@
 		DF4138481D419E8A002BD13A /* LinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4138471D419E8A002BD13A /* LinkTableViewCell.swift */; };
 		DF41384A1D41A0C9002BD13A /* GestureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4138491D41A0C9002BD13A /* GestureTableViewCell.swift */; };
 		DF743D9A1D41D72A0019648A /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF743D991D41D72A0019648A /* Link.swift */; };
-		DF743D9C1D41DC540019648A /* gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF743D9B1D41DC540019648A /* gesture.swift */; };
+		DF743D9C1D41DC540019648A /* Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF743D9B1D41DC540019648A /* Gesture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +58,7 @@
 		DF4138471D419E8A002BD13A /* LinkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkTableViewCell.swift; sourceTree = "<group>"; };
 		DF4138491D41A0C9002BD13A /* GestureTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureTableViewCell.swift; sourceTree = "<group>"; };
 		DF743D991D41D72A0019648A /* Link.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
-		DF743D9B1D41DC540019648A /* gesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gesture.swift; sourceTree = "<group>"; };
+		DF743D9B1D41DC540019648A /* Gesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gesture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +115,7 @@
 				DF743D991D41D72A0019648A /* Link.swift */,
 				DF4138451D419D29002BD13A /* GestureTableViewController.swift */,
 				DF4138491D41A0C9002BD13A /* GestureTableViewCell.swift */,
-				DF743D9B1D41DC540019648A /* gesture.swift */,
+				DF743D9B1D41DC540019648A /* Gesture.swift */,
 				5A2DC6FC1D41A8D800D4DD0A /* SwitchTableViewCell.swift */,
 				5AF0F77D1D41799D00543404 /* Assets.xcassets */,
 				DF4138421D419C08002BD13A /* Supporting Files */,
@@ -290,7 +290,7 @@
 				DF41384A1D41A0C9002BD13A /* GestureTableViewCell.swift in Sources */,
 				DF4138481D419E8A002BD13A /* LinkTableViewCell.swift in Sources */,
 				5A2DC6FD1D41A8D800D4DD0A /* SwitchTableViewCell.swift in Sources */,
-				DF743D9C1D41DC540019648A /* gesture.swift in Sources */,
+				DF743D9C1D41DC540019648A /* Gesture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
