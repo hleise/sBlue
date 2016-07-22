@@ -16,12 +16,12 @@
 		5AF0F7811D41799D00543404 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AF0F77F1D41799D00543404 /* LaunchScreen.storyboard */; };
 		5AF0F78C1D41799E00543404 /* sBlueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0F78B1D41799E00543404 /* sBlueTests.swift */; };
 		5AF0F7971D41799E00543404 /* sBlueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0F7961D41799E00543404 /* sBlueUITests.swift */; };
-		DF4138441D419CA0002BD13A /* LinkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4138431D419CA0002BD13A /* LinkTableViewController.swift */; };
 		DF4138461D419D29002BD13A /* GestureTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4138451D419D29002BD13A /* GestureTableViewController.swift */; };
 		DF4138481D419E8A002BD13A /* LinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4138471D419E8A002BD13A /* LinkTableViewCell.swift */; };
 		DF41384A1D41A0C9002BD13A /* GestureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4138491D41A0C9002BD13A /* GestureTableViewCell.swift */; };
 		DF743D9A1D41D72A0019648A /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF743D991D41D72A0019648A /* Link.swift */; };
 		DF743D9C1D41DC540019648A /* Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF743D9B1D41DC540019648A /* Gesture.swift */; };
+		DF743D9E1D41F8380019648A /* LinkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF743D9D1D41F8380019648A /* LinkTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,12 +57,13 @@
 		5AF0F7921D41799E00543404 /* sBlueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sBlueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AF0F7961D41799E00543404 /* sBlueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sBlueUITests.swift; sourceTree = "<group>"; };
 		5AF0F7981D41799E00543404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DF4138431D419CA0002BD13A /* LinkTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkTableViewController.swift; sourceTree = "<group>"; };
 		DF4138451D419D29002BD13A /* GestureTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureTableViewController.swift; sourceTree = "<group>"; };
 		DF4138471D419E8A002BD13A /* LinkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkTableViewCell.swift; sourceTree = "<group>"; };
 		DF4138491D41A0C9002BD13A /* GestureTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureTableViewCell.swift; sourceTree = "<group>"; };
 		DF743D991D41D72A0019648A /* Link.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		DF743D9B1D41DC540019648A /* Gesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gesture.swift; sourceTree = "<group>"; };
+		DF743D9D1D41F8380019648A /* LinkTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkTableViewController.swift; sourceTree = "<group>"; };
+		DF743D9F1D41F8D20019648A /* LinkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LinkTableViewController.swift; path = sBlue/LinkTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +94,7 @@
 		5AF0F7681D41799D00543404 = {
 			isa = PBXGroup;
 			children = (
+				DF743D9F1D41F8D20019648A /* LinkTableViewController.swift */,
 				5AF0F7731D41799D00543404 /* sBlue */,
 				5AF0F78A1D41799E00543404 /* sBlueTests */,
 				5AF0F7951D41799E00543404 /* sBlueUITests */,
@@ -116,12 +118,11 @@
 				5AF0F77A1D41799D00543404 /* Main.storyboard */,
 				5A17BDC41D41EBAD00261F93 /* KeychainWrapper.swift */,
 				5A17BDC61D41EBCD00261F93 /* KeychainOptions.swift */,
-				5A2DC6FC1D41A8D800D4DD0A /* SwitchTableViewCell.swift */,
-				DF4138491D41A0C9002BD13A /* GestureTableViewCell.swift */,
 				DF4138471D419E8A002BD13A /* LinkTableViewCell.swift */,
 				DF743D991D41D72A0019648A /* Link.swift */,
 				DF4138451D419D29002BD13A /* GestureTableViewController.swift */,
 				DF4138491D41A0C9002BD13A /* GestureTableViewCell.swift */,
+				DF743D9D1D41F8380019648A /* LinkTableViewController.swift */,
 				DF743D9B1D41DC540019648A /* Gesture.swift */,
 				5A2DC6FC1D41A8D800D4DD0A /* SwitchTableViewCell.swift */,
 				5AF0F77D1D41799D00543404 /* Assets.xcassets */,
@@ -290,10 +291,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF743D9E1D41F8380019648A /* LinkTableViewController.swift in Sources */,
 				5A17BDC71D41EBCD00261F93 /* KeychainOptions.swift in Sources */,
 				5AF0F7751D41799D00543404 /* AppDelegate.swift in Sources */,
 				DF743D9A1D41D72A0019648A /* Link.swift in Sources */,
-				DF4138441D419CA0002BD13A /* LinkTableViewController.swift in Sources */,
 				DF4138461D419D29002BD13A /* GestureTableViewController.swift in Sources */,
 				5A17BDC51D41EBAD00261F93 /* KeychainWrapper.swift in Sources */,
 				DF41384A1D41A0C9002BD13A /* GestureTableViewCell.swift in Sources */,
@@ -459,11 +460,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_OPTIMIZATION_LEVEL = s;
 				INFOPLIST_FILE = sBlue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Orrchid.sBlue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
