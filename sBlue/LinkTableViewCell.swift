@@ -22,5 +22,11 @@ class LinkTableViewCell: UITableViewCell {
     }
     
 
-    @IBOutlet weak var LinkagePair: UISegmentedControl!
+    @IBOutlet weak var SenderName: UILabel!
+
+    @IBOutlet weak var GestureName: UILabel!
+    
+    @IBOutlet weak var AppIcon: UIImageView!
+    
+    @IBOutlet weak var LinkSwitch: UISwitch!
 }

@@ -27,7 +27,7 @@ class LinkTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        Links.append(Link(app: "Facebook", profiles: ["Michael"], gesture: "Dancing"))
+        Links.append(Link(app: "facebook", profiles: ["Michael"], gesture: "Dancing"))
         
     }
 
@@ -53,9 +53,9 @@ class LinkTableViewController: UITableViewController {
             
             let linkData = Links[indexPath.row]
             
-            linkCell.LinkagePair?.setTitle("\(linkData.gesture)", forSegmentAtIndex: 1)
-            linkCell.LinkagePair?.setTitle("\(linkData.profiles[0])", forSegmentAtIndex: 0)
-//            linkCell.AppIcon?.image = UIImage(named: "facebookIcon")
+            linkCell.SenderName?.text = linkData.profiles[0]
+            linkCell.GestureName?.text = linkData.gesture
+            linkCell.AppIcon?.image = UIImage(named: "\(linkData.app)Icon")
 //            linkCell.Linkage?.backgroundColor = UIColor(red: 0.8, green: 0.6, blue: 0.5, alpha: 1.0)
             
         }
