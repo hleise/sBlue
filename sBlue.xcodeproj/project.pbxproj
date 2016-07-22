@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A2DC6FD1D41A8D800D4DD0A /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2DC6FC1D41A8D800D4DD0A /* SwitchTableViewCell.swift */; };
 		5AF0F7751D41799D00543404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0F7741D41799D00543404 /* AppDelegate.swift */; };
 		5AF0F77C1D41799D00543404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AF0F77A1D41799D00543404 /* Main.storyboard */; };
 		5AF0F77E1D41799D00543404 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AF0F77D1D41799D00543404 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A2DC6FC1D41A8D800D4DD0A /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		5AF0F7711D41799D00543404 /* sBlue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sBlue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AF0F7741D41799D00543404 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AF0F77B1D41799D00543404 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				5AF0F77A1D41799D00543404 /* Main.storyboard */,
+				5A2DC6FC1D41A8D800D4DD0A /* SwitchTableViewCell.swift */,
 				DF4138491D41A0C9002BD13A /* GestureTableViewCell.swift */,
 				DF4138471D419E8A002BD13A /* LinkTableViewCell.swift */,
 				DF4138451D419D29002BD13A /* GestureTableViewController.swift */,
@@ -279,6 +282,7 @@
 				DF4138461D419D29002BD13A /* GestureTableViewController.swift in Sources */,
 				DF41384A1D41A0C9002BD13A /* GestureTableViewCell.swift in Sources */,
 				DF4138481D419E8A002BD13A /* LinkTableViewCell.swift in Sources */,
+				5A2DC6FD1D41A8D800D4DD0A /* SwitchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
