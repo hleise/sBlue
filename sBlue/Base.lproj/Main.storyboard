@@ -182,7 +182,7 @@
             </objects>
             <point key="canvasLocation" x="755" y="1683"/>
         </scene>
-        <!--Table View Controller-->
+        <!--About-->
         <scene sceneID="IpW-zH-xhE">
             <objects>
                 <tableViewController id="b4Y-zf-iwp" sceneMemberID="viewController">
@@ -301,6 +301,7 @@
                             <outlet property="delegate" destination="b4Y-zf-iwp" id="8ZA-Zo-PLH"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="About" id="b6S-Fj-ZGd"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DEC-pq-VLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
