@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-240" y="-208"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Gesture Table View Controller-->
         <scene sceneID="54l-DG-51x">
             <objects>
-                <tableViewController id="gd6-ou-TZN" sceneMemberID="viewController">
+                <tableViewController id="gd6-ou-TZN" customClass="GestureTableViewController" customModule="sBlue" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mfj-il-REY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,7 +52,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qLX-eh-Fc7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-498" y="3681"/>
+            <point key="canvasLocation" x="304" y="1665"/>
         </scene>
         <!--Settings-->
         <scene sceneID="2dS-12-vze">
@@ -307,10 +307,10 @@
             </objects>
             <point key="canvasLocation" x="2020" y="1648"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Link Table View Controller-->
         <scene sceneID="SUd-O0-FVU">
             <objects>
-                <tableViewController id="xV0-lw-gyg" sceneMemberID="viewController">
+                <tableViewController id="xV0-lw-gyg" customClass="LinkTableViewController" customModule="sBlue" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5Lg-gS-D6C">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -334,7 +334,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cjv-8u-7zD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1266" y="2423"/>
+            <point key="canvasLocation" x="-702" y="1443"/>
         </scene>
         <!--Links-->
         <scene sceneID="C7p-9O-uUp">

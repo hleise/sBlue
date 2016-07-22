@@ -13,6 +13,8 @@
 		5AF0F7811D41799D00543404 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AF0F77F1D41799D00543404 /* LaunchScreen.storyboard */; };
 		5AF0F78C1D41799E00543404 /* sBlueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0F78B1D41799E00543404 /* sBlueTests.swift */; };
 		5AF0F7971D41799E00543404 /* sBlueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0F7961D41799E00543404 /* sBlueUITests.swift */; };
+		DF4138441D419CA0002BD13A /* LinkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4138431D419CA0002BD13A /* LinkTableViewController.swift */; };
+		DF4138461D419D29002BD13A /* GestureTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4138451D419D29002BD13A /* GestureTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		5AF0F7921D41799E00543404 /* sBlueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sBlueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AF0F7961D41799E00543404 /* sBlueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sBlueUITests.swift; sourceTree = "<group>"; };
 		5AF0F7981D41799E00543404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF4138431D419CA0002BD13A /* LinkTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkTableViewController.swift; sourceTree = "<group>"; };
+		DF4138451D419D29002BD13A /* GestureTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +99,11 @@
 		5AF0F7731D41799D00543404 /* sBlue */ = {
 			isa = PBXGroup;
 			children = (
-				5AF0F7741D41799D00543404 /* AppDelegate.swift */,
 				5AF0F77A1D41799D00543404 /* Main.storyboard */,
+				DF4138451D419D29002BD13A /* GestureTableViewController.swift */,
+				DF4138431D419CA0002BD13A /* LinkTableViewController.swift */,
 				5AF0F77D1D41799D00543404 /* Assets.xcassets */,
-				5AF0F77F1D41799D00543404 /* LaunchScreen.storyboard */,
-				5AF0F7821D41799D00543404 /* Info.plist */,
+				DF4138421D419C08002BD13A /* Supporting Files */,
 			);
 			path = sBlue;
 			sourceTree = "<group>";
@@ -120,6 +124,16 @@
 				5AF0F7981D41799E00543404 /* Info.plist */,
 			);
 			path = sBlueUITests;
+			sourceTree = "<group>";
+		};
+		DF4138421D419C08002BD13A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5AF0F7741D41799D00543404 /* AppDelegate.swift */,
+				5AF0F77F1D41799D00543404 /* LaunchScreen.storyboard */,
+				5AF0F7821D41799D00543404 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +269,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AF0F7751D41799D00543404 /* AppDelegate.swift in Sources */,
+				DF4138441D419CA0002BD13A /* LinkTableViewController.swift in Sources */,
+				DF4138461D419D29002BD13A /* GestureTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +503,7 @@
 				5AF0F79D1D41799E00543404 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5AF0F79E1D41799E00543404 /* Build configuration list for PBXNativeTarget "sBlueTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +512,7 @@
 				5AF0F7A01D41799E00543404 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5AF0F7A11D41799E00543404 /* Build configuration list for PBXNativeTarget "sBlueUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +521,7 @@
 				5AF0F7A31D41799E00543404 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
