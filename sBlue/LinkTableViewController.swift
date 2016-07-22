@@ -9,6 +9,14 @@
 import UIKit
 
 class LinkTableViewController: UITableViewController {
+    
+    var Links = [Link]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,22 +26,39 @@ class LinkTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        Links.append(Link(app: "Facebook", profiles: ["Michael"], gesture: "Dancing"))
+        
     }
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return Links.count
+    }
+    
+    private struct Storyboard {
+        static let LinkCellIdentifier = "LinkPrototype"
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.LinkCellIdentifier, forIndexPath: indexPath)
+        if let linkCell = cell as? LinkTableViewCell {
+            
+            let linkData = Links[indexPath.row]
+            
+            linkCell.LinkagePair?.setTitle("\(linkData.gesture)", forSegmentAtIndex: 1)
+            linkCell.LinkagePair?.setTitle("\(linkData.profiles[0])", forSegmentAtIndex: 0)
+//            linkCell.AppIcon?.image = UIImage(named: "facebookIcon")
+//            linkCell.Linkage?.backgroundColor = UIColor(red: 0.8, green: 0.6, blue: 0.5, alpha: 1.0)
+            
+        }
 
 
 

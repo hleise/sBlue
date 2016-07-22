@@ -9,6 +9,9 @@
 import UIKit
 
 class GestureTableViewController: UITableViewController {
+    
+    var customGestures = [MyGesture]();
+    var defaultGestures = [Gesture]();
 
     override func viewDidLoad() {
         super.viewDidLoad()
