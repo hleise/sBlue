@@ -255,16 +255,24 @@
         <!--Settings-->
         <scene sceneID="2dS-12-vze">
             <objects>
-                <tableViewController id="Hbk-wz-zpZ" sceneMemberID="viewController">
+                <tableViewController id="Hbk-wz-zpZ" customClass="SettingsTableViewController" customModule="sBlue" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="W0G-Yf-QeJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="JbT-xR-Dvz">
+                            <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="Hbk-wz-zpZ" id="GNf-CZ-Mfp"/>
+                            </connections>
+                        </searchBar>
                         <sections>
                             <tableViewSection headerTitle="Settings" id="ZVM-4D-g0y">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="switch" id="EDk-Yb-DSQ" customClass="SwitchTableViewCell" customModule="sBlue" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="114" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="158" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EDk-Yb-DSQ" id="xiC-dW-Jub">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -293,7 +301,7 @@
                             <tableViewSection headerTitle="Accounts" id="sF2-AK-Ncr">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="WQ4-0D-eGR" imageView="iHV-2z-gtk" style="IBUITableViewCellStyleDefault" id="Dvb-Pe-7gp">
-                                        <rect key="frame" x="0.0" y="209" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="253" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dvb-Pe-7gp" id="tPW-gE-jZH">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
@@ -317,7 +325,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="zfa-bu-xac" imageView="SoF-KL-2Fu" style="IBUITableViewCellStyleDefault" id="Rhf-g4-H15">
-                                        <rect key="frame" x="0.0" y="253" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="297" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rhf-g4-H15" id="xkA-rJ-hGr">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
@@ -341,7 +349,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="N4G-MF-CNa" imageView="ALN-6q-rAT" style="IBUITableViewCellStyleDefault" id="Nw3-Ye-IES">
-                                        <rect key="frame" x="0.0" y="297" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="341" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nw3-Ye-IES" id="z70-ev-tEZ">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
@@ -373,8 +381,21 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="9j2-Dn-WXe"/>
+                    <connections>
+                        <outlet property="searchBar" destination="JbT-xR-Dvz" id="8Pc-Ia-4j0"/>
+                        <outlet property="searchDisplayController" destination="x2a-aF-kUg" id="cBB-93-34O"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ao-LH-Qrb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="x2a-aF-kUg">
+                    <connections>
+                        <outlet property="delegate" destination="Hbk-wz-zpZ" id="hyp-Vm-IQr"/>
+                        <outlet property="searchBar" destination="JbT-xR-Dvz" id="fjU-fz-WEl"/>
+                        <outlet property="searchContentsController" destination="Hbk-wz-zpZ" id="3I0-ul-bQe"/>
+                        <outlet property="searchResultsDataSource" destination="Hbk-wz-zpZ" id="fKe-1Q-DGY"/>
+                        <outlet property="searchResultsDelegate" destination="Hbk-wz-zpZ" id="csU-g0-RgA"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-2811" y="-292"/>
         </scene>
@@ -467,6 +488,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MmX-m3-36r">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                                     <state key="normal" title="Sign In"/>
+                                                    <connections>
+                                                        <segue destination="GNq-XW-kRu" kind="unwind" unwindAction="unwindToSettings:" id="qEC-NV-vSv"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -487,6 +511,7 @@
                     <navigationItem key="navigationItem" title="Facebook" id="tm0-sk-mYW"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cVb-gG-L4T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="GNq-XW-kRu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-3608" y="553"/>
         </scene>
@@ -1034,6 +1059,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GlQ-Ia-sQl">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                                     <state key="normal" title="Sign In"/>
+                                                    <connections>
+                                                        <segue destination="NKe-kL-zBT" kind="unwind" unwindAction="unwindToSettings:" id="nfU-ra-NLn"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1054,6 +1082,7 @@
                     <navigationItem key="navigationItem" title="Twitter" id="tbv-qm-auL"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FrY-tE-QnB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="NKe-kL-zBT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-2746" y="495"/>
         </scene>
@@ -1146,6 +1175,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVc-XP-G7y">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                                     <state key="normal" title="Sign In"/>
+                                                    <connections>
+                                                        <segue destination="1Km-Yx-kP2" kind="unwind" unwindAction="unwindToSettings:" id="9l2-Ej-zYH"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1166,6 +1198,7 @@
                     <navigationItem key="navigationItem" title="Messages" id="10t-Qa-lTm"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9zi-eb-cUb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1Km-Yx-kP2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-2010" y="425"/>
         </scene>
