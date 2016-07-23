@@ -9,15 +9,15 @@
 import UIKit
 
 class LinkTableViewController: UITableViewController {
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBAction func unwindToLinks(segue: UIStoryboardSegue) {}
     
-    var Links = [Link]() {
+    var links = [Link]() {
         didSet {
             tableView.reloadData()
         }
     }
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,8 +27,24 @@ class LinkTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        Links.append(Link(app: "facebook", profiles: ["Michael"], gesture: "Dancing"))
+        links.append(Link(app: "facebook", profiles: ["Michael"], gesture: "Dancing"))
+        links.append(Link(app: "twitter", profiles: ["José"], gesture: "LED (Red)"))
+        links.append(Link(app: "facebook", profiles: ["Hunter"], gesture: "Twirl"))
+        links.append(Link(app: "messages", profiles: ["John"], gesture: "LED (Blue)"))
+        links.append(Link(app: "messages", profiles: ["William"], gesture: "LED (Flash Red)"))
+        links.append(Link(app: "facebook", profiles: ["Anna"], gesture: "Walk)"))
+        links.append(Link(app: "twitter", profiles: ["Chris"], gesture: "Shake"))
+        links.append(Link(app: "twitter", profiles: ["Mark"], gesture: "Sit"))
+        links.append(Link(app: "messages", profiles: ["Bill Gates"], gesture: "LED (Flash Green)"))
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if self.tableView.contentOffset.y == 0 {
+            self.tableView.contentOffset = CGPoint(x: 0.0, y: self.searchBar.frame.size.height)
+        }
     }
 
     // MARK: - Table view data source
@@ -37,10 +53,10 @@ class LinkTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return Links.count
+        return links.count
     }
     
     private struct Storyboard {
@@ -51,7 +67,7 @@ class LinkTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.LinkCellIdentifier, forIndexPath: indexPath)
         if let linkCell = cell as? LinkTableViewCell {
             
-            let linkData = Links[indexPath.row]
+            let linkData = links[indexPath.row]
             
             linkCell.SenderName?.text = linkData.profiles[0]
             linkCell.GestureName?.text = linkData.gesture

@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A17BDC51D41EBAD00261F93 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A17BDC41D41EBAD00261F93 /* KeychainWrapper.swift */; };
-		5A17BDC71D41EBCD00261F93 /* KeychainOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A17BDC61D41EBCD00261F93 /* KeychainOptions.swift */; };
 		5A2DC6FD1D41A8D800D4DD0A /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2DC6FC1D41A8D800D4DD0A /* SwitchTableViewCell.swift */; };
 		5A9CE06E1D4328A7007C6D76 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CE06D1D4328A7007C6D76 /* SettingsTableViewController.swift */; };
 		5AF0F7751D41799D00543404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0F7741D41799D00543404 /* AppDelegate.swift */; };
@@ -43,8 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5A17BDC41D41EBAD00261F93 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
-		5A17BDC61D41EBCD00261F93 /* KeychainOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainOptions.swift; sourceTree = "<group>"; };
 		5A2DC6FC1D41A8D800D4DD0A /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		5A9CE06D1D4328A7007C6D76 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		5AF0F7711D41799D00543404 /* sBlue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sBlue.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,8 +113,6 @@
 			children = (
 				5AF0F77A1D41799D00543404 /* Main.storyboard */,
 				5A9CE06D1D4328A7007C6D76 /* SettingsTableViewController.swift */,
-				5A17BDC41D41EBAD00261F93 /* KeychainWrapper.swift */,
-				5A17BDC61D41EBCD00261F93 /* KeychainOptions.swift */,
 				DF4138471D419E8A002BD13A /* LinkTableViewCell.swift */,
 				DF743D991D41D72A0019648A /* Link.swift */,
 				DF4138451D419D29002BD13A /* GestureTableViewController.swift */,
@@ -293,11 +287,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF743D9E1D41F8380019648A /* LinkTableViewController.swift in Sources */,
-				5A17BDC71D41EBCD00261F93 /* KeychainOptions.swift in Sources */,
 				5AF0F7751D41799D00543404 /* AppDelegate.swift in Sources */,
 				DF743D9A1D41D72A0019648A /* Link.swift in Sources */,
 				DF4138461D419D29002BD13A /* GestureTableViewController.swift in Sources */,
-				5A17BDC51D41EBAD00261F93 /* KeychainWrapper.swift in Sources */,
 				DF41384A1D41A0C9002BD13A /* GestureTableViewCell.swift in Sources */,
 				DF4138481D419E8A002BD13A /* LinkTableViewCell.swift in Sources */,
 				5A9CE06E1D4328A7007C6D76 /* SettingsTableViewController.swift in Sources */,

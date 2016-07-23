@@ -10,6 +10,7 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController {
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBAction func unwindToSettings(segue: UIStoryboardSegue) {}
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,8 +46,6 @@ class SettingsTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return super.tableView(tableView, numberOfRowsInSection: section)
     }
-    
-    @IBAction func unwindToSettings(segue: UIStoryboardSegue) {}
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
