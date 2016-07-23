@@ -63,7 +63,6 @@
 		DF743D991D41D72A0019648A /* Link.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		DF743D9B1D41DC540019648A /* Gesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gesture.swift; sourceTree = "<group>"; };
 		DF743D9D1D41F8380019648A /* LinkTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkTableViewController.swift; sourceTree = "<group>"; };
-		DF743D9F1D41F8D20019648A /* LinkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LinkTableViewController.swift; path = sBlue/LinkTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +93,6 @@
 		5AF0F7681D41799D00543404 = {
 			isa = PBXGroup;
 			children = (
-				DF743D9F1D41F8D20019648A /* LinkTableViewController.swift */,
 				5AF0F7731D41799D00543404 /* sBlue */,
 				5AF0F78A1D41799E00543404 /* sBlueTests */,
 				5AF0F7951D41799E00543404 /* sBlueUITests */,
