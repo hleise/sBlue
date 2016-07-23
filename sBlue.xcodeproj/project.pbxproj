@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5A51604D1D43BCAC00053199 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51604C1D43BCAC00053199 /* DeviceViewController.swift */; };
 		5A51604F1D43C9D200053199 /* LinkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51604E1D43C9D200053199 /* LinkTableViewController.swift */; };
+		5A5160551D4405B800053199 /* dropdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5160541D4405B800053199 /* dropdownViewController.swift */; };
 		5A9CE06E1D4328A7007C6D76 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CE06D1D4328A7007C6D76 /* SettingsTableViewController.swift */; };
 		5AF0F7751D41799D00543404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0F7741D41799D00543404 /* AppDelegate.swift */; };
 		5AF0F77C1D41799D00543404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AF0F77A1D41799D00543404 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		5A51604C1D43BCAC00053199 /* DeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
 		5A51604E1D43C9D200053199 /* LinkTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkTableViewController.swift; sourceTree = "<group>"; };
+		5A5160541D4405B800053199 /* dropdownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dropdownViewController.swift; sourceTree = "<group>"; };
 		5A9CE06D1D4328A7007C6D76 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		5AF0F7711D41799D00543404 /* sBlue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sBlue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AF0F7741D41799D00543404 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				5AF0F77A1D41799D00543404 /* Main.storyboard */,
+				5A5160541D4405B800053199 /* dropdownViewController.swift */,
 				5A51604C1D43BCAC00053199 /* DeviceViewController.swift */,
 				5A9CE06D1D4328A7007C6D76 /* SettingsTableViewController.swift */,
 				5A51604E1D43C9D200053199 /* LinkTableViewController.swift */,
@@ -274,6 +277,7 @@
 				5AF0F7751D41799D00543404 /* AppDelegate.swift in Sources */,
 				5A51604F1D43C9D200053199 /* LinkTableViewController.swift in Sources */,
 				5A51604D1D43BCAC00053199 /* DeviceViewController.swift in Sources */,
+				5A5160551D4405B800053199 /* dropdownViewController.swift in Sources */,
 				5A9CE06E1D4328A7007C6D76 /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
