@@ -10,6 +10,7 @@
 		5A17BDC51D41EBAD00261F93 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A17BDC41D41EBAD00261F93 /* KeychainWrapper.swift */; };
 		5A17BDC71D41EBCD00261F93 /* KeychainOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A17BDC61D41EBCD00261F93 /* KeychainOptions.swift */; };
 		5A2DC6FD1D41A8D800D4DD0A /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2DC6FC1D41A8D800D4DD0A /* SwitchTableViewCell.swift */; };
+		5A9CE06E1D4328A7007C6D76 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CE06D1D4328A7007C6D76 /* SettingsTableViewController.swift */; };
 		5AF0F7751D41799D00543404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0F7741D41799D00543404 /* AppDelegate.swift */; };
 		5AF0F77C1D41799D00543404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AF0F77A1D41799D00543404 /* Main.storyboard */; };
 		5AF0F77E1D41799D00543404 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AF0F77D1D41799D00543404 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		5A17BDC41D41EBAD00261F93 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 		5A17BDC61D41EBCD00261F93 /* KeychainOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainOptions.swift; sourceTree = "<group>"; };
 		5A2DC6FC1D41A8D800D4DD0A /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		5A9CE06D1D4328A7007C6D76 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		5AF0F7711D41799D00543404 /* sBlue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sBlue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AF0F7741D41799D00543404 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AF0F77B1D41799D00543404 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				5AF0F77A1D41799D00543404 /* Main.storyboard */,
+				5A9CE06D1D4328A7007C6D76 /* SettingsTableViewController.swift */,
 				5A17BDC41D41EBAD00261F93 /* KeychainWrapper.swift */,
 				5A17BDC61D41EBCD00261F93 /* KeychainOptions.swift */,
 				DF4138471D419E8A002BD13A /* LinkTableViewCell.swift */,
@@ -225,7 +228,7 @@
 				TargetAttributes = {
 					5AF0F7701D41799D00543404 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = N4H238ZMS2;
+						DevelopmentTeam = 5E5XUT9GPV;
 					};
 					5AF0F7861D41799E00543404 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -297,6 +300,7 @@
 				5A17BDC51D41EBAD00261F93 /* KeychainWrapper.swift in Sources */,
 				DF41384A1D41A0C9002BD13A /* GestureTableViewCell.swift in Sources */,
 				DF4138481D419E8A002BD13A /* LinkTableViewCell.swift in Sources */,
+				5A9CE06E1D4328A7007C6D76 /* SettingsTableViewController.swift in Sources */,
 				5A2DC6FD1D41A8D800D4DD0A /* SwitchTableViewCell.swift in Sources */,
 				DF743D9C1D41DC540019648A /* Gesture.swift in Sources */,
 			);
@@ -446,7 +450,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = sBlue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Orrchid.sBlue;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Singulariti.sBlue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -461,7 +465,7 @@
 				GCC_OPTIMIZATION_LEVEL = s;
 				INFOPLIST_FILE = sBlue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Orrchid.sBlue;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Singulariti.sBlue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
