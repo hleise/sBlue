@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A2DC6FD1D41A8D800D4DD0A /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2DC6FC1D41A8D800D4DD0A /* SwitchTableViewCell.swift */; };
+		5A51604D1D43BCAC00053199 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51604C1D43BCAC00053199 /* DeviceViewController.swift */; };
+		5A51604F1D43C9D200053199 /* LinkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51604E1D43C9D200053199 /* LinkTableViewController.swift */; };
 		5A9CE06E1D4328A7007C6D76 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CE06D1D4328A7007C6D76 /* SettingsTableViewController.swift */; };
 		5AF0F7751D41799D00543404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0F7741D41799D00543404 /* AppDelegate.swift */; };
 		5AF0F77C1D41799D00543404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AF0F77A1D41799D00543404 /* Main.storyboard */; };
@@ -15,12 +16,6 @@
 		5AF0F7811D41799D00543404 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AF0F77F1D41799D00543404 /* LaunchScreen.storyboard */; };
 		5AF0F78C1D41799E00543404 /* sBlueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0F78B1D41799E00543404 /* sBlueTests.swift */; };
 		5AF0F7971D41799E00543404 /* sBlueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0F7961D41799E00543404 /* sBlueUITests.swift */; };
-		DF4138461D419D29002BD13A /* GestureTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4138451D419D29002BD13A /* GestureTableViewController.swift */; };
-		DF4138481D419E8A002BD13A /* LinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4138471D419E8A002BD13A /* LinkTableViewCell.swift */; };
-		DF41384A1D41A0C9002BD13A /* GestureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4138491D41A0C9002BD13A /* GestureTableViewCell.swift */; };
-		DF743D9A1D41D72A0019648A /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF743D991D41D72A0019648A /* Link.swift */; };
-		DF743D9C1D41DC540019648A /* Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF743D9B1D41DC540019648A /* Gesture.swift */; };
-		DF743D9E1D41F8380019648A /* LinkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF743D9D1D41F8380019648A /* LinkTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5A2DC6FC1D41A8D800D4DD0A /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		5A51604C1D43BCAC00053199 /* DeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
+		5A51604E1D43C9D200053199 /* LinkTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkTableViewController.swift; sourceTree = "<group>"; };
 		5A9CE06D1D4328A7007C6D76 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		5AF0F7711D41799D00543404 /* sBlue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sBlue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AF0F7741D41799D00543404 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,12 +51,6 @@
 		5AF0F7921D41799E00543404 /* sBlueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sBlueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AF0F7961D41799E00543404 /* sBlueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sBlueUITests.swift; sourceTree = "<group>"; };
 		5AF0F7981D41799E00543404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DF4138451D419D29002BD13A /* GestureTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureTableViewController.swift; sourceTree = "<group>"; };
-		DF4138471D419E8A002BD13A /* LinkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkTableViewCell.swift; sourceTree = "<group>"; };
-		DF4138491D41A0C9002BD13A /* GestureTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureTableViewCell.swift; sourceTree = "<group>"; };
-		DF743D991D41D72A0019648A /* Link.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
-		DF743D9B1D41DC540019648A /* Gesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gesture.swift; sourceTree = "<group>"; };
-		DF743D9D1D41F8380019648A /* LinkTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,14 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				5AF0F77A1D41799D00543404 /* Main.storyboard */,
+				5A51604C1D43BCAC00053199 /* DeviceViewController.swift */,
 				5A9CE06D1D4328A7007C6D76 /* SettingsTableViewController.swift */,
-				DF4138471D419E8A002BD13A /* LinkTableViewCell.swift */,
-				DF743D991D41D72A0019648A /* Link.swift */,
-				DF4138451D419D29002BD13A /* GestureTableViewController.swift */,
-				DF4138491D41A0C9002BD13A /* GestureTableViewCell.swift */,
-				DF743D9D1D41F8380019648A /* LinkTableViewController.swift */,
-				DF743D9B1D41DC540019648A /* Gesture.swift */,
-				5A2DC6FC1D41A8D800D4DD0A /* SwitchTableViewCell.swift */,
+				5A51604E1D43C9D200053199 /* LinkTableViewController.swift */,
 				5AF0F77D1D41799D00543404 /* Assets.xcassets */,
 				DF4138421D419C08002BD13A /* Supporting Files */,
 			);
@@ -286,15 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF743D9E1D41F8380019648A /* LinkTableViewController.swift in Sources */,
 				5AF0F7751D41799D00543404 /* AppDelegate.swift in Sources */,
-				DF743D9A1D41D72A0019648A /* Link.swift in Sources */,
-				DF4138461D419D29002BD13A /* GestureTableViewController.swift in Sources */,
-				DF41384A1D41A0C9002BD13A /* GestureTableViewCell.swift in Sources */,
-				DF4138481D419E8A002BD13A /* LinkTableViewCell.swift in Sources */,
+				5A51604F1D43C9D200053199 /* LinkTableViewController.swift in Sources */,
+				5A51604D1D43BCAC00053199 /* DeviceViewController.swift in Sources */,
 				5A9CE06E1D4328A7007C6D76 /* SettingsTableViewController.swift in Sources */,
-				5A2DC6FD1D41A8D800D4DD0A /* SwitchTableViewCell.swift in Sources */,
-				DF743D9C1D41DC540019648A /* Gesture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
