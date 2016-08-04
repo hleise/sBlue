@@ -17,6 +17,8 @@
 		5AF0F7811D41799D00543404 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AF0F77F1D41799D00543404 /* LaunchScreen.storyboard */; };
 		5AF0F78C1D41799E00543404 /* sBlueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0F78B1D41799E00543404 /* sBlueTests.swift */; };
 		5AF0F7971D41799E00543404 /* sBlueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0F7961D41799E00543404 /* sBlueUITests.swift */; };
+		5AF99C4E1D53D78E0049D204 /* BTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF99C4C1D53D78E0049D204 /* BTService.swift */; };
+		5AF99C4F1D53D78E0049D204 /* BTDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF99C4D1D53D78E0049D204 /* BTDiscovery.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		5AF0F7921D41799E00543404 /* sBlueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sBlueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AF0F7961D41799E00543404 /* sBlueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sBlueUITests.swift; sourceTree = "<group>"; };
 		5AF0F7981D41799E00543404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AF99C4C1D53D78E0049D204 /* BTService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTService.swift; sourceTree = "<group>"; };
+		5AF99C4D1D53D78E0049D204 /* BTDiscovery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTDiscovery.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 		5AF0F7731D41799D00543404 /* sBlue */ = {
 			isa = PBXGroup;
 			children = (
+				5AF99C501D53D7950049D204 /* Classes */,
 				5AF0F77A1D41799D00543404 /* Main.storyboard */,
 				5A51604C1D43BCAC00053199 /* DeviceViewController.swift */,
 				5A5160561D44150400053199 /* gesturesTableViewController.swift */,
@@ -130,6 +135,15 @@
 				5AF0F7981D41799E00543404 /* Info.plist */,
 			);
 			path = sBlueUITests;
+			sourceTree = "<group>";
+		};
+		5AF99C501D53D7950049D204 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5AF99C4C1D53D78E0049D204 /* BTService.swift */,
+				5AF99C4D1D53D78E0049D204 /* BTDiscovery.swift */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		DF4138421D419C08002BD13A /* Supporting Files */ = {
@@ -277,6 +291,8 @@
 				5A5160571D44150400053199 /* gesturesTableViewController.swift in Sources */,
 				5AF0F7751D41799D00543404 /* AppDelegate.swift in Sources */,
 				5A51604F1D43C9D200053199 /* LinkTableViewController.swift in Sources */,
+				5AF99C4F1D53D78E0049D204 /* BTDiscovery.swift in Sources */,
+				5AF99C4E1D53D78E0049D204 /* BTService.swift in Sources */,
 				5A51604D1D43BCAC00053199 /* DeviceViewController.swift in Sources */,
 				5A9CE06E1D4328A7007C6D76 /* SettingsTableViewController.swift in Sources */,
 			);
