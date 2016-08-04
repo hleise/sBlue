@@ -19,6 +19,7 @@
 		5AF0F7971D41799E00543404 /* sBlueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0F7961D41799E00543404 /* sBlueUITests.swift */; };
 		5AF99C4E1D53D78E0049D204 /* BTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF99C4C1D53D78E0049D204 /* BTService.swift */; };
 		5AF99C4F1D53D78E0049D204 /* BTDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF99C4D1D53D78E0049D204 /* BTDiscovery.swift */; };
+		5AF99C521D53E7AB0049D204 /* Tables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF99C511D53E7AB0049D204 /* Tables.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		5AF0F7981D41799E00543404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AF99C4C1D53D78E0049D204 /* BTService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTService.swift; sourceTree = "<group>"; };
 		5AF99C4D1D53D78E0049D204 /* BTDiscovery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTDiscovery.swift; sourceTree = "<group>"; };
+		5AF99C511D53E7AB0049D204 /* Tables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tables.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				5AF99C501D53D7950049D204 /* Classes */,
+				5AF99C511D53E7AB0049D204 /* Tables.swift */,
 				5AF0F77A1D41799D00543404 /* Main.storyboard */,
 				5A51604C1D43BCAC00053199 /* DeviceViewController.swift */,
 				5A5160561D44150400053199 /* gesturesTableViewController.swift */,
@@ -290,6 +293,7 @@
 			files = (
 				5A5160571D44150400053199 /* gesturesTableViewController.swift in Sources */,
 				5AF0F7751D41799D00543404 /* AppDelegate.swift in Sources */,
+				5AF99C521D53E7AB0049D204 /* Tables.swift in Sources */,
 				5A51604F1D43C9D200053199 /* LinkTableViewController.swift in Sources */,
 				5AF99C4F1D53D78E0049D204 /* BTDiscovery.swift in Sources */,
 				5AF99C4E1D53D78E0049D204 /* BTService.swift in Sources */,
