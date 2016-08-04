@@ -227,7 +227,7 @@
 				TargetAttributes = {
 					5AF0F7701D41799D00543404 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = N4H238ZMS2;
+						DevelopmentTeam = 5E5XUT9GPV;
 					};
 					5AF0F7861D41799E00543404 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -446,7 +446,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = sBlue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Orrchid.sBlue;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Singulariti.sBlue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -461,7 +461,7 @@
 				GCC_OPTIMIZATION_LEVEL = s;
 				INFOPLIST_FILE = sBlue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Orrchid.sBlue;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Singulariti.sBlue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
