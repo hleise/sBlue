@@ -14,7 +14,7 @@ var commands : [[String]] = [["modify", "00"],
                              ["query", "02"]]
 
 // gestureElementID | gestureElementName
-var gestureElements : [[String]] = [["00", "Blink"],
+var defaultGestures : [[String]] = [["00", "Blink"],
                                     ["01", "Random RGB"],
                                     ["02", "Servo 360"],
                                     ["03", "Red Light"],
@@ -26,16 +26,7 @@ var gestureElements : [[String]] = [["00", "Blink"],
                                     ["09", "White Light"]]
 
 // gestureID | gestureName | gesture1 | gesture2 | gesture3 | gesture4 | gesture5
-var gestures : [[String]] = [["00", "Blink", "00", "FF", "FF", "FF", "FF"],
-                             ["01", "Random RGB", "01", "FF", "FF", "FF", "FF"],
-                             ["02", "Servo 360", "02", "FF", "FF", "FF", "FF"],
-                             ["03", "Red Light", "03", "FF", "FF", "FF", "FF"],
-                             ["04", "Blue Light", "04", "FF", "FF", "FF", "FF"],
-                             ["05", "Green Light", "05", "FF", "FF", "FF", "FF"],
-                             ["06", "Yellow Light", "06", "FF", "FF", "FF", "FF"],
-                             ["07", "Orange Light", "07", "FF", "FF", "FF", "FF"],
-                             ["08", "Purple Light", "08", "FF", "FF", "FF", "FF"],
-                             ["09", "White Light", "09", "FF", "FF", "FF", "FF"]]
+var customGestures : [[String]] = [[]]
 
 // appID | appName | appIdentifier
 var apps : [[String]] = [["00", "Whatsapp", "com.whatsapp"],
