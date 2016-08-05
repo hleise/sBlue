@@ -91,7 +91,12 @@ class GestureSelectionTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
-        case 0: return "My Gestures"
+        case 0:
+            if customGestures.count > 0 {
+                return "My Gestures"
+            }else {
+                return nil
+            }
         case 1: return "Default Gestures"
         default:
             print("Section number is \(section), but should be 0 or 1")

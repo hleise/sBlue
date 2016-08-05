@@ -42,7 +42,7 @@ class GesturesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         switch section {
-        case 0: return customGestures.count
+        case 0: return customGestures.count + 1
         case 1: return defaultGestures.count
         default:
             print("Table View section was \(section), it should be 0 or 1")
@@ -68,7 +68,7 @@ class GesturesTableViewController: UITableViewController {
                 let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.MyGestureCellIdentifier, forIndexPath: indexPath)
                 
                 if let myGestureCell = cell as? MyGestureTableViewCell {
-                    let data = customGestures[indexPath.row]
+                    let data = customGestures[indexPath.row - 1]
                     myGestureCell.myGestureLabel.text = data[1]
                 }
                 
@@ -112,7 +112,7 @@ class GesturesTableViewController: UITableViewController {
     // Determines what to do when the user swipes left on a cell and selects delete
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            customGestures.removeAtIndex(indexPath.row)
+            customGestures.removeAtIndex(indexPath.row - 1)
             tableView.reloadData()
         } 
     }
@@ -143,7 +143,7 @@ class GesturesTableViewController: UITableViewController {
             destination.gestureTableViewControllerType = "Edit Gesture"
             
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                destination.gestureID = indexPath.row as Int
+                destination.gestureID = indexPath.row - 1 as Int
             }
         }
     }

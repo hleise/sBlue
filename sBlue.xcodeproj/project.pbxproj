@@ -13,6 +13,7 @@
 		5A387B341D54E82D0064D35E /* AppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A387B331D54E82D0064D35E /* AppTableViewCell.swift */; };
 		5A387B361D54FBEA0064D35E /* AddEditGestureTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A387B351D54FBEA0064D35E /* AddEditGestureTableViewController.swift */; };
 		5A387B381D54FBFD0064D35E /* AddEditLinkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A387B371D54FBFD0064D35E /* AddEditLinkTableViewController.swift */; };
+		5A4E63031D554E7A00108225 /* DefaultGestureSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4E63021D554E7A00108225 /* DefaultGestureSelectionTableViewController.swift */; };
 		5A51604D1D43BCAC00053199 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51604C1D43BCAC00053199 /* DeviceViewController.swift */; };
 		5A853AE81D5462E500C95DDC /* LinksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A853AE61D5462E500C95DDC /* LinksTableViewCell.swift */; };
 		5A853AE91D5462E500C95DDC /* LinksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A853AE71D5462E500C95DDC /* LinksTableViewController.swift */; };
@@ -55,6 +56,7 @@
 		5A387B331D54E82D0064D35E /* AppTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTableViewCell.swift; sourceTree = "<group>"; };
 		5A387B351D54FBEA0064D35E /* AddEditGestureTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditGestureTableViewController.swift; sourceTree = "<group>"; };
 		5A387B371D54FBFD0064D35E /* AddEditLinkTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditLinkTableViewController.swift; sourceTree = "<group>"; };
+		5A4E63021D554E7A00108225 /* DefaultGestureSelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultGestureSelectionTableViewController.swift; sourceTree = "<group>"; };
 		5A51604C1D43BCAC00053199 /* DeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
 		5A853AE61D5462E500C95DDC /* LinksTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinksTableViewCell.swift; sourceTree = "<group>"; };
 		5A853AE71D5462E500C95DDC /* LinksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinksTableViewController.swift; sourceTree = "<group>"; };
@@ -130,9 +132,10 @@
 				5AF99C501D53D7950049D204 /* Classes */,
 				5A387B351D54FBEA0064D35E /* AddEditGestureTableViewController.swift */,
 				5A387B371D54FBFD0064D35E /* AddEditLinkTableViewController.swift */,
-				5A387B311D54E6210064D35E /* AppsTableViewController.swift */,
 				5A387B331D54E82D0064D35E /* AppTableViewCell.swift */,
+				5A387B311D54E6210064D35E /* AppsTableViewController.swift */,
 				5A387B2F1D54E50F0064D35E /* ContactTableViewController.swift */,
+				5A4E63021D554E7A00108225 /* DefaultGestureSelectionTableViewController.swift */,
 				5AB4DFFF1D543ADF00601CA8 /* DefaultGesturesTableViewCell.swift */,
 				5A51604C1D43BCAC00053199 /* DeviceViewController.swift */,
 				5A387B271D54D7E90064D35E /* GestureSelectionTableViewController.swift */,
@@ -320,6 +323,7 @@
 			files = (
 				5AF0F7751D41799D00543404 /* AppDelegate.swift in Sources */,
 				5A387B321D54E6210064D35E /* AppsTableViewController.swift in Sources */,
+				5A4E63031D554E7A00108225 /* DefaultGestureSelectionTableViewController.swift in Sources */,
 				5AF99C521D53E7AB0049D204 /* Tables.swift in Sources */,
 				5AF99C4F1D53D78E0049D204 /* BTDiscovery.swift in Sources */,
 				5AF99C4E1D53D78E0049D204 /* BTService.swift in Sources */,

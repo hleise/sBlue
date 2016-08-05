@@ -543,37 +543,17 @@
             </objects>
             <point key="canvasLocation" x="-112" y="-668"/>
         </scene>
-        <!--Gesture Selection Table View Controller-->
+        <!--Default Gesture Selection Table View Controller-->
         <scene sceneID="NKB-Zf-f2b">
             <objects>
-                <tableViewController id="BUi-77-eFj" customClass="GestureSelectionTableViewController" customModule="sBlue" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="BUi-77-eFj" customClass="DefaultGestureSelectionTableViewController" customModule="sBlue" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vd2-L0-m9i">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="My Gesture" textLabel="wjq-xA-Juc" style="IBUITableViewCellStyleDefault" id="fmP-NX-BcM" customClass="MyGestureTableViewCell" customModule="sBlue" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fmP-NX-BcM" id="Aq0-Wp-qlV">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="My Gesture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wjq-xA-Juc">
-                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="myGestureLabel" destination="wjq-xA-Juc" id="049-vM-P5g"/>
-                                </connections>
-                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Default Gesture" textLabel="keL-rR-o9L" style="IBUITableViewCellStyleDefault" id="56M-wJ-8eR" customClass="DefaultGestureTableViewCell" customModule="sBlue" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="116" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="56M-wJ-8eR" id="mpD-2z-Ncf">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -638,7 +618,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="BUi-77-eFj" kind="show" id="2gh-gT-Efg"/>
+                                            <segue destination="BUi-77-eFj" kind="show" identifier="toSelectDefaultGesture" id="2gh-gT-Efg"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Gesture" textLabel="mfC-eq-D91" detailTextLabel="SGE-8a-fAL" style="IBUITableViewCellStyleValue1" id="90P-xP-Gho">
@@ -665,7 +645,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="BUi-77-eFj" kind="show" id="R77-zt-oF9"/>
+                                            <segue destination="BUi-77-eFj" kind="show" identifier="toSelectDefaultGesture" id="R77-zt-oF9"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Gesture" textLabel="AMd-d1-LXx" detailTextLabel="lHI-SQ-3kg" style="IBUITableViewCellStyleValue1" id="EyZ-z2-8By">
@@ -692,7 +672,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="BUi-77-eFj" kind="show" id="Hdo-VV-fHX"/>
+                                            <segue destination="BUi-77-eFj" kind="show" identifier="toSelectDefaultGesture" id="Hdo-VV-fHX"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Gesture" textLabel="Phb-o6-Fq2" detailTextLabel="CLv-HR-QvO" style="IBUITableViewCellStyleValue1" id="VPR-V4-Unv">
@@ -719,7 +699,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="BUi-77-eFj" kind="show" id="HGw-TW-0w1"/>
+                                            <segue destination="BUi-77-eFj" kind="show" identifier="toSelectDefaultGesture" id="HGw-TW-0w1"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Gesture" textLabel="BiJ-od-1x2" detailTextLabel="dO8-nO-U83" style="IBUITableViewCellStyleValue1" id="RqW-xh-4n2">
@@ -746,7 +726,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="BUi-77-eFj" kind="show" id="Zdh-ZT-K88"/>
+                                            <segue destination="BUi-77-eFj" kind="show" identifier="toSelectDefaultGesture" id="Zdh-ZT-K88"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -803,11 +783,11 @@
                     <connections>
                         <outlet property="barButtonRight" destination="uXg-Lc-lMk" id="Xpx-LJ-Vhe"/>
                         <outlet property="deleteCell" destination="SuR-yF-BGD" id="trL-2M-9dt"/>
-                        <outlet property="gesture1Label" destination="8nE-aK-Pmo" id="mG8-6h-zaT"/>
-                        <outlet property="gesture2Label" destination="mfC-eq-D91" id="Sqo-7H-Z4g"/>
-                        <outlet property="gesture3Label" destination="AMd-d1-LXx" id="YXm-TF-3Wx"/>
-                        <outlet property="gesture4Label" destination="Phb-o6-Fq2" id="Akm-G9-lkP"/>
-                        <outlet property="gesture5Label" destination="BiJ-od-1x2" id="RQ8-oB-74w"/>
+                        <outlet property="gesture1Label" destination="99D-Yv-wR8" id="RY0-Hk-EYw"/>
+                        <outlet property="gesture2Label" destination="SGE-8a-fAL" id="SC7-ez-4Df"/>
+                        <outlet property="gesture3Label" destination="lHI-SQ-3kg" id="6Wr-Qh-pug"/>
+                        <outlet property="gesture4Label" destination="CLv-HR-QvO" id="CsP-fI-Rg1"/>
+                        <outlet property="gesture5Label" destination="dO8-nO-U83" id="WL4-Kj-XdK"/>
                         <outlet property="gestureTableViewControllerTitle" destination="LEk-gX-S9z" id="moW-HS-qph"/>
                     </connections>
                 </tableViewController>
@@ -1894,8 +1874,8 @@
         <image name="twitterIcon" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="IWO-1v-nTt"/>
         <segue reference="KWB-3j-ihW"/>
         <segue reference="2gh-gT-Efg"/>
+        <segue reference="IWO-1v-nTt"/>
     </inferredMetricsTieBreakers>
 </document>

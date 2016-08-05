@@ -12,6 +12,7 @@ class AddEditGestureTableViewController: UITableViewController {
 
     var gestureTableViewControllerType = String()
     var gestureName = String()
+    var defaultGestureName = String()
     var gestureID = Int()
     
     @IBOutlet weak var gestureTableViewControllerTitle: UINavigationItem!
@@ -51,13 +52,18 @@ class AddEditGestureTableViewController: UITableViewController {
         } else {
             barButtonRight.title = "Done"
             deleteCell.hidden = false
-        }
-        
-        //var labelArray = [gesture1Label, gesture2Label, gesture3Label, gesture4Label, gesture5Label]
-        for i in 0..<5 {
-            precondition(links[gestureID][2] == "00" || links[gestureID][2] == "01", "Unknown Gesture Type \(links[i][2])")
             
-            //labelArray[i].text = defaultGestures[Int(customGestures[gestureID][i + 2])!][1]
+            var labelArray = [gesture1Label, gesture2Label, gesture3Label, gesture4Label, gesture5Label]
+            for i in 0..<5 {
+                let defaultGestureID = Int(customGestures[gestureID][i + 2])
+                
+                if (defaultGestureID == nil) {
+                    labelArray[i].text = "None"
+                } else {
+                    defaultGestureName = defaultGestures[defaultGestureID!][1]
+                    labelArray[i].text = defaultGestureName
+                }
+            }
         }
     }
 
@@ -122,9 +128,16 @@ class AddEditGestureTableViewController: UITableViewController {
     */
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "toSelectGesture") {
-            let destination = segue.destinationViewController as! GestureSelectionTableViewController
-            destination.gestureName = "Dancing"
+        if (segue.identifier == "toSelectDefaultGesture") {
+            let destination = segue.destinationViewController as! DefaultGestureSelectionTableViewController
+            
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let defaultGestureID = Int(customGestures[gestureID][indexPath.row + 2])
+                
+                if (defaultGestureID != nil) {
+                    destination.gestureName = defaultGestures[defaultGestureID!][1]
+                }
+            }
         }
     }
 
