@@ -30,7 +30,11 @@ class LinkTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return links.count
+        if section == 0 {
+            return 1
+        } else {
+            return links.count
+        }
     }
     
     
@@ -50,36 +54,46 @@ class LinkTableViewController: UITableViewController {
         
         if let linkCell = cell as? LinkTableViewCell {
             
-            for i in (0...contacts.count-1) {
+            for i in (0..<contacts.count) {
                 if contacts[i][0] == data[1] {
-                    linkCell.linkName.text = contacts[i][2]
+                    linkCell.linkContact.text = contacts[i][2]
                 }
             }
             
             //custom gesture
             if data[2] == "01" {
-                for i in (0...customGestures.count-1) {
+                for i in (0..<customGestures.count) {
                     if customGestures[i][0] == data[3] {
-                        linkCell.linkGesture.text = customGestures[i][6]
+                        linkCell.linkGesture.text = customGestures[i][1]
                     }
                 }
             } else {
-                for i in (0...defaultGestures.count-1) {
-                    if defaultGestures[i][1] == data[3] {
-                        linkCell.linkGesture.text = defaultGestures[i][0]
+                for i in (0..<defaultGestures.count) {
+                    if defaultGestures[i][0] == data[3] {
+                        linkCell.linkGesture.text = defaultGestures[i][1]
                     }
                 }
             }
             
             
             //contact name
-            for i in (0...contacts.count-1) {
+            var contactApp = ""
+            for i in (0..<contacts.count) {
                 if contacts[i][0] == data[1] {
-                    linkCell.linkIcon.image = UIImage(named: "\(contacts[i][1].lowercaseString)" + "Icon")
                     
+                    contactApp = contacts[i][1]
                     
                 }
             }
+            
+            for i in (0..<apps.count) {
+                if apps[i][0] == contactApp {
+                    
+                linkCell.linkIcon.image = UIImage(named: "\(apps[i][1].lowercaseString)" + "Icon")
+                    
+                }
+            }
+            
             
         }
         
