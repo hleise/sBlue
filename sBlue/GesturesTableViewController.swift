@@ -9,7 +9,8 @@
 import UIKit
 
 class GesturesTableViewController: UITableViewController {
-
+    @IBAction func unwindToGestures(segue: UIStoryboardSegue) {}
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

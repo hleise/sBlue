@@ -34,7 +34,6 @@ class LinksTableViewController: UITableViewController {
             return 1
         } else {
             return links.count
-            
         }
     }
     
@@ -55,10 +54,7 @@ class LinksTableViewController: UITableViewController {
                 let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.LinkCellIdentifier, forIndexPath: indexPath)
                 
                 if let linkCell = cell as? LinksTableViewCell {
-                    
                     let data = links[indexPath.row]
-                    
-                    print("BBBBBBBB")
                     for i in (0..<contacts.count) {
                         if contacts[i][0] == data[1] {
                             linkCell.linkContact.text = contacts[i][2]
@@ -80,22 +76,17 @@ class LinksTableViewController: UITableViewController {
                         }
                     }
                     
-                    
                     //contact name
                     var contactApp = ""
                     for i in (0..<contacts.count) {
                         if contacts[i][0] == data[1] {
-                            
                             contactApp = contacts[i][1]
-                            
                         }
                     }
                     
                     for i in (0..<apps.count) {
                         if apps[i][0] == contactApp {
-                            
                             linkCell.linkIcon.image = UIImage(named: "\(apps[i][1].lowercaseString)" + "Icon")
-                            
                         }
                     }
                 }
