@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		5A51604D1D43BCAC00053199 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51604C1D43BCAC00053199 /* DeviceViewController.swift */; };
-		5A51604F1D43C9D200053199 /* LinksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51604E1D43C9D200053199 /* LinksTableViewController.swift */; };
-		5A5160571D44150400053199 /* gesturesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5160561D44150400053199 /* gesturesTableViewController.swift */; };
+		5A51604F1D43C9D200053199 /* LinkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51604E1D43C9D200053199 /* LinkTableViewController.swift */; };
 		5A9CE06E1D4328A7007C6D76 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CE06D1D4328A7007C6D76 /* SettingsTableViewController.swift */; };
+		5AB4DFFC1D542FE700601CA8 /* gesturesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB4DFFB1D542FE700601CA8 /* gesturesTableViewController.swift */; };
+		5AB4DFFE1D5438BE00601CA8 /* MyGestureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB4DFFD1D5438BE00601CA8 /* MyGestureTableViewCell.swift */; };
+		5AB4E0001D543ADF00601CA8 /* DefaultGesturesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB4DFFF1D543ADF00601CA8 /* DefaultGesturesTableViewCell.swift */; };
 		5AF0F7751D41799D00543404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0F7741D41799D00543404 /* AppDelegate.swift */; };
+		5AF0F77C1D41799D00543404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AF0F77A1D41799D00543404 /* Main.storyboard */; };
 		5AF0F77E1D41799D00543404 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AF0F77D1D41799D00543404 /* Assets.xcassets */; };
 		5AF0F7811D41799D00543404 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AF0F77F1D41799D00543404 /* LaunchScreen.storyboard */; };
 		5AF0F78C1D41799E00543404 /* sBlueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0F78B1D41799E00543404 /* sBlueTests.swift */; };
@@ -20,8 +23,6 @@
 		5AF99C4F1D53D78E0049D204 /* BTDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF99C4D1D53D78E0049D204 /* BTDiscovery.swift */; };
 		5AF99C521D53E7AB0049D204 /* Tables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF99C511D53E7AB0049D204 /* Tables.swift */; };
 		DF252E021D5421C9008020EF /* LinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF252E011D5421C9008020EF /* LinkTableViewCell.swift */; };
-		DF252E041D5431E0008020EF /* NewLinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF252E031D5431E0008020EF /* NewLinkTableViewCell.swift */; };
-		DF252E051D544628008020EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AF0F77A1D41799D00543404 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,9 +44,11 @@
 
 /* Begin PBXFileReference section */
 		5A51604C1D43BCAC00053199 /* DeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
-		5A51604E1D43C9D200053199 /* LinksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinksTableViewController.swift; sourceTree = "<group>"; };
-		5A5160561D44150400053199 /* gesturesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gesturesTableViewController.swift; sourceTree = "<group>"; };
+		5A51604E1D43C9D200053199 /* LinkTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkTableViewController.swift; sourceTree = "<group>"; };
 		5A9CE06D1D4328A7007C6D76 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		5AB4DFFB1D542FE700601CA8 /* gesturesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gesturesTableViewController.swift; sourceTree = "<group>"; };
+		5AB4DFFD1D5438BE00601CA8 /* MyGestureTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyGestureTableViewCell.swift; sourceTree = "<group>"; };
+		5AB4DFFF1D543ADF00601CA8 /* DefaultGesturesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultGesturesTableViewCell.swift; sourceTree = "<group>"; };
 		5AF0F7711D41799D00543404 /* sBlue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sBlue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AF0F7741D41799D00543404 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AF0F77B1D41799D00543404 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,7 +65,6 @@
 		5AF99C4D1D53D78E0049D204 /* BTDiscovery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTDiscovery.swift; sourceTree = "<group>"; };
 		5AF99C511D53E7AB0049D204 /* Tables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tables.swift; sourceTree = "<group>"; };
 		DF252E011D5421C9008020EF /* LinkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkTableViewCell.swift; sourceTree = "<group>"; };
-		DF252E031D5431E0008020EF /* NewLinkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewLinkTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,10 +118,11 @@
 				5AF99C501D53D7950049D204 /* Classes */,
 				5AF99C511D53E7AB0049D204 /* Tables.swift */,
 				5AF0F77A1D41799D00543404 /* Main.storyboard */,
+				5AB4DFFD1D5438BE00601CA8 /* MyGestureTableViewCell.swift */,
 				5A51604C1D43BCAC00053199 /* DeviceViewController.swift */,
-				DF252E031D5431E0008020EF /* NewLinkTableViewCell.swift */,
-				5A5160561D44150400053199 /* gesturesTableViewController.swift */,
-				5A51604E1D43C9D200053199 /* LinksTableViewController.swift */,
+				5AB4DFFB1D542FE700601CA8 /* gesturesTableViewController.swift */,
+				5AB4DFFF1D543ADF00601CA8 /* DefaultGesturesTableViewCell.swift */,
+				5A51604E1D43C9D200053199 /* LinkTableViewController.swift */,
 				DF252E011D5421C9008020EF /* LinkTableViewCell.swift */,
 				5A9CE06D1D4328A7007C6D76 /* SettingsTableViewController.swift */,
 				5AF0F77D1D41799D00543404 /* Assets.xcassets */,
@@ -233,7 +236,7 @@
 				TargetAttributes = {
 					5AF0F7701D41799D00543404 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = N4H238ZMS2;
+						DevelopmentTeam = 5E5XUT9GPV;
 					};
 					5AF0F7861D41799E00543404 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -272,7 +275,7 @@
 			files = (
 				5AF0F7811D41799D00543404 /* LaunchScreen.storyboard in Resources */,
 				5AF0F77E1D41799D00543404 /* Assets.xcassets in Resources */,
-				DF252E051D544628008020EF /* Main.storyboard in Resources */,
+				5AF0F77C1D41799D00543404 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,16 +300,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A5160571D44150400053199 /* gesturesTableViewController.swift in Sources */,
 				5AF0F7751D41799D00543404 /* AppDelegate.swift in Sources */,
-				DF252E041D5431E0008020EF /* NewLinkTableViewCell.swift in Sources */,
 				DF252E021D5421C9008020EF /* LinkTableViewCell.swift in Sources */,
 				5AF99C521D53E7AB0049D204 /* Tables.swift in Sources */,
-				5A51604F1D43C9D200053199 /* LinksTableViewController.swift in Sources */,
+				5A51604F1D43C9D200053199 /* LinkTableViewController.swift in Sources */,
 				5AF99C4F1D53D78E0049D204 /* BTDiscovery.swift in Sources */,
 				5AF99C4E1D53D78E0049D204 /* BTService.swift in Sources */,
 				5A51604D1D43BCAC00053199 /* DeviceViewController.swift in Sources */,
 				5A9CE06E1D4328A7007C6D76 /* SettingsTableViewController.swift in Sources */,
+				5AB4DFFE1D5438BE00601CA8 /* MyGestureTableViewCell.swift in Sources */,
+				5AB4DFFC1D542FE700601CA8 /* gesturesTableViewController.swift in Sources */,
+				5AB4E0001D543ADF00601CA8 /* DefaultGesturesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,7 +458,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = sBlue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Orrchid.sBlue;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Singulariti.sBlue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -469,7 +473,7 @@
 				GCC_OPTIMIZATION_LEVEL = s;
 				INFOPLIST_FILE = sBlue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Orrchid.sBlue;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Singulariti.sBlue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";

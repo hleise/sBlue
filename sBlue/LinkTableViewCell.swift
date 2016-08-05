@@ -9,15 +9,8 @@
 import UIKit
 
 class LinkTableViewCell: UITableViewCell {
-
-
     @IBOutlet weak var linkContact: UILabel!
-    
-    
     @IBOutlet weak var linkGesture: UILabel!
-    
-    
     @IBOutlet weak var linkIcon: UIImageView!
-    
     @IBOutlet weak var linkSwitch: UISwitch!
 }
