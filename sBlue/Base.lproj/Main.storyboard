@@ -1083,7 +1083,7 @@
         <!--Links-->
         <scene sceneID="SUd-O0-FVU">
             <objects>
-                <tableViewController id="xV0-lw-gyg" customClass="LinkTableViewController" customModule="sBlue" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="xV0-lw-gyg" customClass="LinksTableViewController" customModule="sBlue" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="5Lg-gS-D6C">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1128,11 +1128,11 @@
                                     <segue destination="wad-8g-qhf" kind="show" id="PGR-ib-AJd"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Link" id="O4f-ST-Dpb" customClass="LinkTableViewCell" customModule="sBlue" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="94" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Link" id="O4f-ST-Dpb" customClass="LinksTableViewCell" customModule="sBlue" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="93.5" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O4f-ST-Dpb" id="8Ok-qL-Dq9">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kIK-DH-nYV">

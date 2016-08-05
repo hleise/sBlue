@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5A51604D1D43BCAC00053199 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51604C1D43BCAC00053199 /* DeviceViewController.swift */; };
-		5A51604F1D43C9D200053199 /* LinkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51604E1D43C9D200053199 /* LinkTableViewController.swift */; };
+		5A853AE81D5462E500C95DDC /* LinksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A853AE61D5462E500C95DDC /* LinksTableViewCell.swift */; };
+		5A853AE91D5462E500C95DDC /* LinksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A853AE71D5462E500C95DDC /* LinksTableViewController.swift */; };
 		5A9CE06E1D4328A7007C6D76 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CE06D1D4328A7007C6D76 /* SettingsTableViewController.swift */; };
 		5AB4DFFC1D542FE700601CA8 /* GesturesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB4DFFB1D542FE700601CA8 /* GesturesTableViewController.swift */; };
 		5AB4DFFE1D5438BE00601CA8 /* MyGestureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB4DFFD1D5438BE00601CA8 /* MyGestureTableViewCell.swift */; };
@@ -22,7 +23,6 @@
 		5AF99C4E1D53D78E0049D204 /* BTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF99C4C1D53D78E0049D204 /* BTService.swift */; };
 		5AF99C4F1D53D78E0049D204 /* BTDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF99C4D1D53D78E0049D204 /* BTDiscovery.swift */; };
 		5AF99C521D53E7AB0049D204 /* Tables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF99C511D53E7AB0049D204 /* Tables.swift */; };
-		DF252E021D5421C9008020EF /* LinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF252E011D5421C9008020EF /* LinkTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +44,8 @@
 
 /* Begin PBXFileReference section */
 		5A51604C1D43BCAC00053199 /* DeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
-		5A51604E1D43C9D200053199 /* LinkTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkTableViewController.swift; sourceTree = "<group>"; };
+		5A853AE61D5462E500C95DDC /* LinksTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinksTableViewCell.swift; sourceTree = "<group>"; };
+		5A853AE71D5462E500C95DDC /* LinksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinksTableViewController.swift; sourceTree = "<group>"; };
 		5A9CE06D1D4328A7007C6D76 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		5AB4DFFB1D542FE700601CA8 /* GesturesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GesturesTableViewController.swift; sourceTree = "<group>"; };
 		5AB4DFFD1D5438BE00601CA8 /* MyGestureTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyGestureTableViewCell.swift; sourceTree = "<group>"; };
@@ -64,7 +65,6 @@
 		5AF99C4C1D53D78E0049D204 /* BTService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTService.swift; sourceTree = "<group>"; };
 		5AF99C4D1D53D78E0049D204 /* BTDiscovery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTDiscovery.swift; sourceTree = "<group>"; };
 		5AF99C511D53E7AB0049D204 /* Tables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tables.swift; sourceTree = "<group>"; };
-		DF252E011D5421C9008020EF /* LinkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,16 +116,15 @@
 			isa = PBXGroup;
 			children = (
 				5AF99C501D53D7950049D204 /* Classes */,
-				5AF99C511D53E7AB0049D204 /* Tables.swift */,
-				5AF0F77A1D41799D00543404 /* Main.storyboard */,
-				5AB4DFFD1D5438BE00601CA8 /* MyGestureTableViewCell.swift */,
+				5AB4DFFF1D543ADF00601CA8 /* DefaultGesturesTableViewCell.swift */,
 				5A51604C1D43BCAC00053199 /* DeviceViewController.swift */,
 				5AB4DFFB1D542FE700601CA8 /* GesturesTableViewController.swift */,
-				5AB4DFFF1D543ADF00601CA8 /* DefaultGesturesTableViewCell.swift */,
-				5A51604E1D43C9D200053199 /* LinkTableViewController.swift */,
-				DF252E011D5421C9008020EF /* LinkTableViewCell.swift */,
+				5A853AE61D5462E500C95DDC /* LinksTableViewCell.swift */,
+				5A853AE71D5462E500C95DDC /* LinksTableViewController.swift */,
+				5AF0F77A1D41799D00543404 /* Main.storyboard */,
+				5AB4DFFD1D5438BE00601CA8 /* MyGestureTableViewCell.swift */,
 				5A9CE06D1D4328A7007C6D76 /* SettingsTableViewController.swift */,
-				5AF0F77D1D41799D00543404 /* Assets.xcassets */,
+				5AF99C511D53E7AB0049D204 /* Tables.swift */,
 				DF4138421D419C08002BD13A /* Supporting Files */,
 			);
 			path = sBlue;
@@ -162,8 +161,9 @@
 			isa = PBXGroup;
 			children = (
 				5AF0F7741D41799D00543404 /* AppDelegate.swift */,
-				5AF0F77F1D41799D00543404 /* LaunchScreen.storyboard */,
+				5AF0F77D1D41799D00543404 /* Assets.xcassets */,
 				5AF0F7821D41799D00543404 /* Info.plist */,
+				5AF0F77F1D41799D00543404 /* LaunchScreen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -301,16 +301,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AF0F7751D41799D00543404 /* AppDelegate.swift in Sources */,
-				DF252E021D5421C9008020EF /* LinkTableViewCell.swift in Sources */,
 				5AF99C521D53E7AB0049D204 /* Tables.swift in Sources */,
-				5A51604F1D43C9D200053199 /* LinkTableViewController.swift in Sources */,
 				5AF99C4F1D53D78E0049D204 /* BTDiscovery.swift in Sources */,
 				5AF99C4E1D53D78E0049D204 /* BTService.swift in Sources */,
 				5A51604D1D43BCAC00053199 /* DeviceViewController.swift in Sources */,
 				5A9CE06E1D4328A7007C6D76 /* SettingsTableViewController.swift in Sources */,
+				5A853AE91D5462E500C95DDC /* LinksTableViewController.swift in Sources */,
 				5AB4DFFE1D5438BE00601CA8 /* MyGestureTableViewCell.swift in Sources */,
 				5AB4DFFC1D542FE700601CA8 /* GesturesTableViewController.swift in Sources */,
 				5AB4E0001D543ADF00601CA8 /* DefaultGesturesTableViewCell.swift in Sources */,
+				5A853AE81D5462E500C95DDC /* LinksTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
