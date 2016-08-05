@@ -20,6 +20,11 @@ class GesturesTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -127,15 +132,21 @@ class GesturesTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        precondition(segue.identifier == "toAddGesture" || segue.identifier == "toEditGesture", "Unknown Segue Identifier")
+        
+        if (segue.identifier == "toAddGesture") {
+            let destination = segue.destinationViewController as! AddEditGestureTableViewController
+            destination.gestureTableViewControllerType = "Add Gesture"
+        } else {
+            let destination = segue.destinationViewController as! AddEditGestureTableViewController
+            destination.gestureTableViewControllerType = "Edit Gesture"
+            
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                destination.gestureID = indexPath.row as Int
+            }
+        }
     }
-    */
     
     /*
     class oldgesturesTableViewController: UITableViewController {

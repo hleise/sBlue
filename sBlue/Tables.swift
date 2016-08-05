@@ -29,7 +29,10 @@ var defaultGestures : [[String]] = [["00", "Blink"],
 // gestureID | gestureName | gesture1 | gesture2 | gesture3 | gesture4 | gesture5 
 var customGestures : [[String]] = [["00", "Dancing", "00", "FF", "FF", "FF", "FF"],
                                    ["01", "Walking", "01", "03", "FF", "FF", "FF"],
-                                   ["02", "Party", "01", "02", "FF", "FF", "FF"]]
+                                   ["02", "Party", "01", "02", "FF", "FF", "FF"],
+                                   ["00", "Rainbow", "00", "FF", "FF", "FF", "FF"],
+                                   ["01", "Wag Tail", "01", "03", "FF", "FF", "FF"],
+                                   ["02", "Cry", "01", "02", "FF", "FF", "FF"]]
 
 // appID | appName | appIdentifier
 var apps : [[String]] = [["00", "Whatsapp", "com.whatsapp"],

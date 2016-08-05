@@ -1,5 +1,5 @@
 //
-//  ContactTableViewController.swift
+//  AddEditLinkTableViewController.swift
 //  sBlue
 //
 //  Created by Hunter Leise on 8/5/16.
@@ -8,14 +8,44 @@
 
 import UIKit
 
-class ContactTableViewController: UITableViewController {
+class AddEditLinkTableViewController: UITableViewController {
 
-    @IBOutlet weak var contactTextField: UITextField!
+    var linkTableViewControllerType = String()
+    var linkID = Int()
+    
+    @IBOutlet weak var linkTableViewControllerTitle: UINavigationItem!
+    @IBOutlet weak var barButtonRight: UIBarButtonItem!
+    @IBOutlet weak var deleteCell: UITableViewCell!
+    
+    @IBAction func deleteLink(sender: AnyObject) {
+        links.removeAtIndex(linkID)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
-        contactTextField.becomeFirstResponder()
+        self.title = linkTableViewControllerType
+        linkTableViewControllerTitle.title = linkTableViewControllerType
+        
+        precondition(linkTableViewControllerType == "Add Link" || linkTableViewControllerType == "Edit Link", "Unknown linkTableViewControllerType")
+        
+        if (linkTableViewControllerType == "Add Link") {
+            barButtonRight.title = "Save"
+            deleteCell.hidden = true
+        } else {
+            barButtonRight.title = "Done"
+            deleteCell.hidden = false
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,13 +56,11 @@ class ContactTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
+        return super.numberOfSectionsInTableView(tableView)
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 1
+        return super.tableView(tableView, numberOfRowsInSection: section)
     }
 
     /*
@@ -79,12 +107,15 @@ class ContactTableViewController: UITableViewController {
         return true
     }
     */
-    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "") {
-            var viewController = segue.destinationViewController
-            
-        }
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
     }
-    
+    */
+
 }

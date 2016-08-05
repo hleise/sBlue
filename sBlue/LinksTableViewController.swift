@@ -20,6 +20,11 @@ class LinksTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
 
     // MARK: - Table view data source
 
@@ -120,31 +125,20 @@ class LinksTableViewController: UITableViewController {
          }
     }
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        precondition(segue.identifier == "toAddLink" || segue.identifier == "toEditLink", "Unknown Segue Identifier")
+        
+        if (segue.identifier == "toAddLink") {
+            let destination = segue.destinationViewController as! AddEditLinkTableViewController
+            destination.linkTableViewControllerType = "Add Link"
+        } else {
+            let destination = segue.destinationViewController as! AddEditLinkTableViewController
+            destination.linkTableViewControllerType = "Edit Link"
+            
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                destination.linkID = indexPath.row as Int
+            }
+        }
     }
-    */
-
+    
 }
