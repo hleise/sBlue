@@ -20,6 +20,7 @@
 		5AF99C4E1D53D78E0049D204 /* BTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF99C4C1D53D78E0049D204 /* BTService.swift */; };
 		5AF99C4F1D53D78E0049D204 /* BTDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF99C4D1D53D78E0049D204 /* BTDiscovery.swift */; };
 		5AF99C521D53E7AB0049D204 /* Tables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF99C511D53E7AB0049D204 /* Tables.swift */; };
+		DF252E021D5421C9008020EF /* LinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF252E011D5421C9008020EF /* LinkTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		5AF99C4C1D53D78E0049D204 /* BTService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTService.swift; sourceTree = "<group>"; };
 		5AF99C4D1D53D78E0049D204 /* BTDiscovery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTDiscovery.swift; sourceTree = "<group>"; };
 		5AF99C511D53E7AB0049D204 /* Tables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tables.swift; sourceTree = "<group>"; };
+		DF252E011D5421C9008020EF /* LinkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				5A51604C1D43BCAC00053199 /* DeviceViewController.swift */,
 				5A5160561D44150400053199 /* gesturesTableViewController.swift */,
 				5A51604E1D43C9D200053199 /* LinkTableViewController.swift */,
+				DF252E011D5421C9008020EF /* LinkTableViewCell.swift */,
 				5A9CE06D1D4328A7007C6D76 /* SettingsTableViewController.swift */,
 				5AF0F77D1D41799D00543404 /* Assets.xcassets */,
 				DF4138421D419C08002BD13A /* Supporting Files */,
@@ -293,6 +296,7 @@
 			files = (
 				5A5160571D44150400053199 /* gesturesTableViewController.swift in Sources */,
 				5AF0F7751D41799D00543404 /* AppDelegate.swift in Sources */,
+				DF252E021D5421C9008020EF /* LinkTableViewCell.swift in Sources */,
 				5AF99C521D53E7AB0049D204 /* Tables.swift in Sources */,
 				5A51604F1D43C9D200053199 /* LinkTableViewController.swift in Sources */,
 				5AF99C4F1D53D78E0049D204 /* BTDiscovery.swift in Sources */,

@@ -25,13 +25,67 @@ class LinkTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return super.numberOfSectionsInTableView(tableView)
+        return 2
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return super.tableView(tableView, numberOfRowsInSection: section)
+        return links.count
     }
+    
+    
+    private struct Storyboard {
+        static let NewLinkCellIdentifier  = "New Link"
+        static let LinkCellIdentifier = "Link"
+    }
+    
+    override func tableView(tv: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.LinkCellIdentifier, forIndexPath: indexPath)
+        
+        let data = links[indexPath.row]
+        
+        
+        
+        if let linkCell = cell as? LinkTableViewCell {
+            
+            for i in (0...contacts.count-1) {
+                if contacts[i][0] == data[1] {
+                    linkCell.linkName.text = contacts[i][2]
+                }
+            }
+            
+            //custom gesture
+            if data[2] == "01" {
+                for i in (0...customGestures.count-1) {
+                    if customGestures[i][0] == data[3] {
+                        linkCell.linkGesture.text = customGestures[i][6]
+                    }
+                }
+            } else {
+                for i in (0...defaultGestures.count-1) {
+                    if defaultGestures[i][1] == data[3] {
+                        linkCell.linkGesture.text = defaultGestures[i][0]
+                    }
+                }
+            }
+            
+            
+            //contact name
+            for i in (0...contacts.count-1) {
+                if contacts[i][0] == data[1] {
+                    linkCell.linkIcon.image = UIImage(named: "\(contacts[i][1].lowercaseString)" + "Icon")
+                    
+                    
+                }
+            }
+            
+        }
+        
+        return cell
+    }
+
 
     /*
     // Override to support conditional editing of the table view.
