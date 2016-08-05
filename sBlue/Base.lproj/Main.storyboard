@@ -1470,7 +1470,6 @@
                             <outlet property="delegate" destination="xV0-lw-gyg" id="Soh-EO-emB"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Links" image="linksTab" selectedImage="linksTab" id="2KI-0X-GY8"/>
                     <navigationItem key="navigationItem" title="Links" id="75z-Ci-Oko">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="L6Q-C8-WLn"/>
                     </navigationItem>
@@ -2160,7 +2159,6 @@
     <resources>
         <image name="facebookIcon" width="300" height="300"/>
         <image name="gesturesTab" width="26" height="32"/>
-        <image name="linksTab" width="28" height="28"/>
         <image name="messagesIcon" width="300" height="300"/>
         <image name="twitterIcon" width="300" height="300"/>
     </resources>
