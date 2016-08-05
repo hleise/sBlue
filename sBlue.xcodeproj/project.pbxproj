@@ -10,7 +10,7 @@
 		5A51604D1D43BCAC00053199 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51604C1D43BCAC00053199 /* DeviceViewController.swift */; };
 		5A51604F1D43C9D200053199 /* LinkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51604E1D43C9D200053199 /* LinkTableViewController.swift */; };
 		5A9CE06E1D4328A7007C6D76 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CE06D1D4328A7007C6D76 /* SettingsTableViewController.swift */; };
-		5AB4DFFC1D542FE700601CA8 /* gesturesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB4DFFB1D542FE700601CA8 /* gesturesTableViewController.swift */; };
+		5AB4DFFC1D542FE700601CA8 /* GesturesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB4DFFB1D542FE700601CA8 /* GesturesTableViewController.swift */; };
 		5AB4DFFE1D5438BE00601CA8 /* MyGestureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB4DFFD1D5438BE00601CA8 /* MyGestureTableViewCell.swift */; };
 		5AB4E0001D543ADF00601CA8 /* DefaultGesturesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB4DFFF1D543ADF00601CA8 /* DefaultGesturesTableViewCell.swift */; };
 		5AF0F7751D41799D00543404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0F7741D41799D00543404 /* AppDelegate.swift */; };
@@ -46,7 +46,7 @@
 		5A51604C1D43BCAC00053199 /* DeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
 		5A51604E1D43C9D200053199 /* LinkTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkTableViewController.swift; sourceTree = "<group>"; };
 		5A9CE06D1D4328A7007C6D76 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
-		5AB4DFFB1D542FE700601CA8 /* gesturesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gesturesTableViewController.swift; sourceTree = "<group>"; };
+		5AB4DFFB1D542FE700601CA8 /* GesturesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GesturesTableViewController.swift; sourceTree = "<group>"; };
 		5AB4DFFD1D5438BE00601CA8 /* MyGestureTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyGestureTableViewCell.swift; sourceTree = "<group>"; };
 		5AB4DFFF1D543ADF00601CA8 /* DefaultGesturesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultGesturesTableViewCell.swift; sourceTree = "<group>"; };
 		5AF0F7711D41799D00543404 /* sBlue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sBlue.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,7 +120,7 @@
 				5AF0F77A1D41799D00543404 /* Main.storyboard */,
 				5AB4DFFD1D5438BE00601CA8 /* MyGestureTableViewCell.swift */,
 				5A51604C1D43BCAC00053199 /* DeviceViewController.swift */,
-				5AB4DFFB1D542FE700601CA8 /* gesturesTableViewController.swift */,
+				5AB4DFFB1D542FE700601CA8 /* GesturesTableViewController.swift */,
 				5AB4DFFF1D543ADF00601CA8 /* DefaultGesturesTableViewCell.swift */,
 				5A51604E1D43C9D200053199 /* LinkTableViewController.swift */,
 				DF252E011D5421C9008020EF /* LinkTableViewCell.swift */,
@@ -309,7 +309,7 @@
 				5A51604D1D43BCAC00053199 /* DeviceViewController.swift in Sources */,
 				5A9CE06E1D4328A7007C6D76 /* SettingsTableViewController.swift in Sources */,
 				5AB4DFFE1D5438BE00601CA8 /* MyGestureTableViewCell.swift in Sources */,
-				5AB4DFFC1D542FE700601CA8 /* gesturesTableViewController.swift in Sources */,
+				5AB4DFFC1D542FE700601CA8 /* GesturesTableViewController.swift in Sources */,
 				5AB4E0001D543ADF00601CA8 /* DefaultGesturesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

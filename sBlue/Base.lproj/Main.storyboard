@@ -464,7 +464,7 @@
         <!--Gestures-->
         <scene sceneID="wl7-DP-YzX">
             <objects>
-                <tableViewController title="Gestures" id="unO-Qd-voW" customClass="gesturesTableViewController" customModule="sBlue" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Gestures" id="unO-Qd-voW" customClass="GesturesTableViewController" customModule="sBlue" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="zLn-pK-wGb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

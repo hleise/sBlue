@@ -1,5 +1,5 @@
 //
-//  gesturesTableViewController.swift
+//  GesturesTableViewController.swift
 //  sBlue
 //
 //  Created by Hunter Leise on 8/4/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class gesturesTableViewController: UITableViewController {
+class GesturesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
