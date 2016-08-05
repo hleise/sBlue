@@ -1,16 +1,15 @@
 //
-//  GesturesTableViewController.swift
+//  GestureSelectionTableViewController.swift
 //  sBlue
 //
-//  Created by Hunter Leise on 8/4/16.
+//  Created by Hunter Leise on 8/5/16.
 //  Copyright © 2016 Vivo Applications. All rights reserved.
 //
 
 import UIKit
 
-class GesturesTableViewController: UITableViewController {
-    @IBAction func unwindToGestures(segue: UIStoryboardSegue) {}
-    
+class GestureSelectionTableViewController: UITableViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,7 +31,6 @@ class GesturesTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 2
     }
-    
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -46,7 +44,6 @@ class GesturesTableViewController: UITableViewController {
     }
     
     private struct Storyboard {
-        static let NewGestureCellIdentifier  = "New Gesture"
         static let MyGestureCellIdentifier = "My Gesture"
         static let DefaultGestureCellIdentifier = "Default Gesture"
     }
@@ -55,21 +52,14 @@ class GesturesTableViewController: UITableViewController {
         
         switch indexPath.section {
         case 0:
-            if indexPath.row == 0 {
-                let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.NewGestureCellIdentifier, forIndexPath: indexPath)
-                
-                return cell
-            } else {
-                let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.MyGestureCellIdentifier, forIndexPath: indexPath)
-                
-                if let myGestureCell = cell as? MyGestureTableViewCell {
-                    let data = customGestures[indexPath.row]
-                    myGestureCell.myGestureLabel.text = data[1]
-                }
-                
-                return cell
+            let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.MyGestureCellIdentifier, forIndexPath: indexPath)
+            
+            if let myGestureCell = cell as? MyGestureTableViewCell {
+                let data = customGestures[indexPath.row]
+                myGestureCell.myGestureLabel.text = data[1]
             }
             
+            return cell
         case 1:
             let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.DefaultGestureCellIdentifier, forIndexPath: indexPath)
             
@@ -79,7 +69,7 @@ class GesturesTableViewController: UITableViewController {
             }
             return cell
         default:
-            let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.NewGestureCellIdentifier, forIndexPath: indexPath)
+            let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.MyGestureCellIdentifier, forIndexPath: indexPath)
             print("indexPath.section was \(indexPath.section), it should be 0 or 1")
             return cell
         }
@@ -139,65 +129,5 @@ class GesturesTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    /*
-    class oldgesturesTableViewController: UITableViewController {
-        @IBOutlet weak var gesturesNavigation: UIButton!
-        
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            
-            // Uncomment the following line to preserve selection between presentations
-            // self.clearsSelectionOnViewWillAppear = false
-            
-            // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-            // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        }
-        
-        override func didReceiveMemoryWarning() {
-            super.didReceiveMemoryWarning()
-            // Dispose of any resources that can be recreated.
-        }
-        
-        // MARK: - Table view data source
-        
-        override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-            // #warning Incomplete implementation, return the number of sections
-            return super.numberOfSectionsInTableView(tableView)
-        }
-        
-        override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            // #warning Incomplete implementation, return the number of rows
-            return super.tableView(tableView, numberOfRowsInSection: section)
-        }
-        
-        @IBAction func gesturesDropdownClicked(sender: UIButton) {
-            let alert = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
-            
-            alert.addAction(UIAlertAction(
-                title: "My Gestures",
-                style: .Default)
-            { (action: UIAlertAction) -> Void in }
-            )
-            
-            alert.addAction(UIAlertAction(
-                title: "Default Gestures",
-                style: .Default)
-            { (action: UIAlertAction) -> Void in }
-            )
-            
-            alert.addAction(UIAlertAction(
-                title: "Cancel",
-                style: .Cancel)
-            { (action: UIAlertAction) -> Void in }
-            )
-            
-            alert.modalPresentationStyle = .Popover
-            let ppc = alert.popoverPresentationController
-            ppc?.sourceView = gesturesNavigation
-            
-            presentViewController(alert, animated: true, completion: nil)
-        }
-        */
 
 }
