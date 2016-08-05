@@ -9,6 +9,8 @@
 import UIKit
 
 class GestureSelectionTableViewController: UITableViewController {
+    
+    var gestureName = String()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +59,12 @@ class GestureSelectionTableViewController: UITableViewController {
             if let myGestureCell = cell as? MyGestureTableViewCell {
                 let data = customGestures[indexPath.row]
                 myGestureCell.myGestureLabel.text = data[1]
+                
+                if (gestureName == data[1]) {
+                    myGestureCell.accessoryType = .Checkmark
+                } else {
+                    myGestureCell.accessoryType = .None
+                }
             }
             
             return cell
@@ -66,6 +74,12 @@ class GestureSelectionTableViewController: UITableViewController {
             if let defaultGestureCell = cell as? DefaultGestureTableViewCell {
                 let data = defaultGestures[indexPath.row]
                 defaultGestureCell.defaultGestureLabel?.text = data[1]
+                
+                if (gestureName == data[1]) {
+                    defaultGestureCell.accessoryType = .Checkmark
+                } else {
+                    defaultGestureCell.accessoryType = .None
+                }
             }
             return cell
         default:
@@ -83,6 +97,20 @@ class GestureSelectionTableViewController: UITableViewController {
             print("Section number is \(section), but should be 0 or 1")
             return nil
         }
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        precondition(indexPath.section == 0 || indexPath.section == 1, "Unknown Index Path Section \(indexPath.section)")
+        
+        if (indexPath.section == 0) {
+            let data = customGestures[indexPath.row]
+            gestureName = data[1]
+        } else {
+            let data = defaultGestures[indexPath.row]
+            gestureName = data[1]
+        }
+        
+        tableView.reloadData()
     }
 
     /*

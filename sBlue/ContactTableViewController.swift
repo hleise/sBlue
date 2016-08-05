@@ -9,6 +9,8 @@
 import UIKit
 
 class ContactTableViewController: UITableViewController {
+    
+    var contactName = String()
 
     @IBOutlet weak var contactTextField: UITextField!
     
@@ -16,6 +18,12 @@ class ContactTableViewController: UITableViewController {
         super.viewDidLoad()
         
         contactTextField.becomeFirstResponder()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        contactTextField.text = contactName
     }
 
     override func didReceiveMemoryWarning() {
@@ -79,12 +87,5 @@ class ContactTableViewController: UITableViewController {
         return true
     }
     */
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "") {
-            var viewController = segue.destinationViewController
-            
-        }
-    }
     
 }

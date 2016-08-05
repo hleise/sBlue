@@ -12,7 +12,13 @@ class AddEditLinkTableViewController: UITableViewController {
 
     var linkTableViewControllerType = String()
     var linkID = Int()
+    var app = String()
+    var contact = String()
+    var gesture = String()
     
+    @IBOutlet weak var appNameLabel: UILabel!
+    @IBOutlet weak var contactNameLabel: UILabel!
+    @IBOutlet weak var gestureNameLabel: UILabel!
     @IBOutlet weak var linkTableViewControllerTitle: UINavigationItem!
     @IBOutlet weak var barButtonRight: UIBarButtonItem!
     @IBOutlet weak var deleteCell: UITableViewCell!
@@ -45,6 +51,9 @@ class AddEditLinkTableViewController: UITableViewController {
         } else {
             barButtonRight.title = "Done"
             deleteCell.hidden = false
+            appNameLabel.text = app
+            contactNameLabel.text = contact
+            gestureNameLabel.text = gesture
         }
     }
 
@@ -108,14 +117,17 @@ class AddEditLinkTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if (segue.identifier == "toSelectApp") {
+            let destination = segue.destinationViewController as! AppsTableViewController
+            destination.appName = app
+        } else if (segue.identifier == "toSelectContact"){
+            let destination = segue.destinationViewController as! ContactTableViewController
+            destination.contactName = contact
+        } else if (segue.identifier == "toSelectGesture"){
+            let destination = segue.destinationViewController as! GestureSelectionTableViewController
+            destination.gestureName = gesture
+        }
     }
-    */
 
 }

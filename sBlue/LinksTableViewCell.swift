@@ -13,4 +13,5 @@ class LinksTableViewCell: UITableViewCell {
     @IBOutlet weak var linkGesture: UILabel!
     @IBOutlet weak var linkIcon: UIImageView!
     @IBOutlet weak var linkSwitch: UISwitch!
+    var linkApp = "None"
 }

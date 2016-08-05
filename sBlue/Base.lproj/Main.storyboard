@@ -803,6 +803,11 @@
                     <connections>
                         <outlet property="barButtonRight" destination="uXg-Lc-lMk" id="Xpx-LJ-Vhe"/>
                         <outlet property="deleteCell" destination="SuR-yF-BGD" id="trL-2M-9dt"/>
+                        <outlet property="gesture1Label" destination="8nE-aK-Pmo" id="mG8-6h-zaT"/>
+                        <outlet property="gesture2Label" destination="mfC-eq-D91" id="Sqo-7H-Z4g"/>
+                        <outlet property="gesture3Label" destination="AMd-d1-LXx" id="YXm-TF-3Wx"/>
+                        <outlet property="gesture4Label" destination="Phb-o6-Fq2" id="Akm-G9-lkP"/>
+                        <outlet property="gesture5Label" destination="BiJ-od-1x2" id="RQ8-oB-74w"/>
                         <outlet property="gestureTableViewControllerTitle" destination="LEk-gX-S9z" id="moW-HS-qph"/>
                     </connections>
                 </tableViewController>
@@ -1360,7 +1365,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Pyq-jK-gRl" kind="show" id="dQv-YJ-InP"/>
+                                            <segue destination="Pyq-jK-gRl" kind="show" identifier="toSelectApp" id="dQv-YJ-InP"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="5cK-Ac-OQq" detailTextLabel="BQP-5E-WYf" style="IBUITableViewCellStyleValue1" id="2Ua-Qq-Sbn">
@@ -1387,7 +1392,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="ida-gh-Ri4" kind="show" id="Mnq-x1-Mzq"/>
+                                            <segue destination="ida-gh-Ri4" kind="show" identifier="toSelectContact" id="Mnq-x1-Mzq"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="y5C-Se-dp0" detailTextLabel="P0k-w7-eKY" style="IBUITableViewCellStyleValue1" id="Gf6-b7-rh4">
@@ -1414,7 +1419,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Zqw-RC-tDd" kind="show" id="LEe-zM-Zaa"/>
+                                            <segue destination="Zqw-RC-tDd" kind="show" identifier="toSelectGesture" id="LEe-zM-Zaa"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -1470,8 +1475,11 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="appNameLabel" destination="bQ8-AQ-d9n" id="Chp-Yf-CzR"/>
                         <outlet property="barButtonRight" destination="69N-CG-cUI" id="mZq-ez-tQn"/>
+                        <outlet property="contactNameLabel" destination="BQP-5E-WYf" id="sXd-1j-EkW"/>
                         <outlet property="deleteCell" destination="blD-Eo-cAF" id="cOJ-vW-EKK"/>
+                        <outlet property="gestureNameLabel" destination="P0k-w7-eKY" id="d4X-kf-x6K"/>
                         <outlet property="linkTableViewControllerTitle" destination="ZzE-Nl-bcg" id="BIM-zL-dFX"/>
                     </connections>
                 </tableViewController>
@@ -1785,7 +1793,7 @@
                                         <rect key="frame" x="0.0" y="79" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Usa-Lx-cM3" id="s3O-Ac-W6d">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contact Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="74b-5o-qaa">

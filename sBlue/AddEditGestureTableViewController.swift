@@ -11,11 +11,17 @@ import UIKit
 class AddEditGestureTableViewController: UITableViewController {
 
     var gestureTableViewControllerType = String()
+    var gestureName = String()
     var gestureID = Int()
     
     @IBOutlet weak var gestureTableViewControllerTitle: UINavigationItem!
     @IBOutlet weak var barButtonRight: UIBarButtonItem!
     @IBOutlet weak var deleteCell: UITableViewCell!
+    @IBOutlet weak var gesture1Label: UILabel!
+    @IBOutlet weak var gesture2Label: UILabel!
+    @IBOutlet weak var gesture3Label: UILabel!
+    @IBOutlet weak var gesture4Label: UILabel!
+    @IBOutlet weak var gesture5Label: UILabel!
     
     @IBAction func deleteLink(sender: AnyObject) {
         customGestures.removeAtIndex(gestureID)
@@ -45,6 +51,13 @@ class AddEditGestureTableViewController: UITableViewController {
         } else {
             barButtonRight.title = "Done"
             deleteCell.hidden = false
+        }
+        
+        //var labelArray = [gesture1Label, gesture2Label, gesture3Label, gesture4Label, gesture5Label]
+        for i in 0..<5 {
+            precondition(links[gestureID][2] == "00" || links[gestureID][2] == "01", "Unknown Gesture Type \(links[i][2])")
+            
+            //labelArray[i].text = defaultGestures[Int(customGestures[gestureID][i + 2])!][1]
         }
     }
 
@@ -108,14 +121,11 @@ class AddEditGestureTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if (segue.identifier == "toSelectGesture") {
+            let destination = segue.destinationViewController as! GestureSelectionTableViewController
+            destination.gestureName = "Dancing"
+        }
     }
-    */
 
 }

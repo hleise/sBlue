@@ -9,6 +9,8 @@
 import UIKit
 
 class AppsTableViewController: UITableViewController {
+    
+    var appName = String()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,9 +46,22 @@ class AppsTableViewController: UITableViewController {
         if let appCell = cell as? AppTableViewCell {
             let data = apps[indexPath.row]
             appCell.appNameTextField.text = data[1]
+            
+            if (appName == data[1]) {
+                appCell.accessoryType = .Checkmark
+            } else {
+                appCell.accessoryType = .None
+            }
         }
         
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let data = apps[indexPath.row]
+        appName = data[1]
+        tableView.reloadData()
     }
 
     /*

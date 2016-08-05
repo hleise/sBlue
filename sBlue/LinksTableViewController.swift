@@ -89,9 +89,11 @@ class LinksTableViewController: UITableViewController {
                         }
                     }
                     
+                    // app icon
                     for i in (0..<apps.count) {
                         if apps[i][0] == contactApp {
                             linkCell.linkIcon.image = UIImage(named: "\(apps[i][1].lowercaseString)" + "Icon")
+                            linkCell.linkApp = apps[i][1]
                         }
                     }
                 }
@@ -126,7 +128,7 @@ class LinksTableViewController: UITableViewController {
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        precondition(segue.identifier == "toAddLink" || segue.identifier == "toEditLink", "Unknown Segue Identifier")
+        precondition(segue.identifier == "toAddLink" || segue.identifier == "toEditLink", "Unknown Segue Identifier \(segue.identifier)")
         
         if (segue.identifier == "toAddLink") {
             let destination = segue.destinationViewController as! AddEditLinkTableViewController
@@ -137,6 +139,12 @@ class LinksTableViewController: UITableViewController {
             
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 destination.linkID = indexPath.row as Int
+                
+                // get the cell associated with the indexPath selected.
+                let cell = self.tableView.cellForRowAtIndexPath(indexPath) as! LinksTableViewCell
+                destination.app = cell.linkApp
+                destination.contact = cell.linkContact.text!
+                destination.gesture = cell.linkGesture.text!
             }
         }
     }
