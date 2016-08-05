@@ -95,25 +95,22 @@ class GesturesTableViewController: UITableViewController {
         }
     }
 
-    /*
-    // Override to support conditional editing of the table view.
+    // Returns if you can swipe left on a given cell
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+        if (indexPath.section == 0) && (indexPath.row != 0) {
+            return true
+        } else {
+            return false
+        }
     }
-    */
 
-    /*
-    // Override to support editing the table view.
+    // Determines what to do when the user swipes left on a cell and selects delete
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            customGestures.removeAtIndex(indexPath.row)
+            tableView.reloadData()
+        } 
     }
-    */
 
     /*
     // Override to support rearranging the table view.

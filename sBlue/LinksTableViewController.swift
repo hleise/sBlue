@@ -98,27 +98,27 @@ class LinksTableViewController: UITableViewController {
             return cell
         }
     }
-
-
-    /*
-    // Override to support conditional editing of the table view.
+    
+    // Returns if you can swipe left on a given cell
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
+        if (indexPath.section == 0) {
+            return false
+        } else if (indexPath.section == 1) {
+            return true
+        } else {
+            print("Section was \(indexPath.section), but should be 0 or 1")
+            return false
+        }
+     }
+    
+    // Determines what to do when the user swipes left on a cell and selects delete
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+         if editingStyle == .Delete {
+            links.removeAtIndex(indexPath.row)
+            tableView.reloadData()
+         }
     }
-    */
 
     /*
     // Override to support rearranging the table view.
