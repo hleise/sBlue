@@ -34,70 +34,78 @@ class LinkTableViewController: UITableViewController {
             return 1
         } else {
             return links.count
+            
         }
     }
     
     
     private struct Storyboard {
-        static let NewLinkCellIdentifier  = "New Link"
+        static let NewLinkCellIdentifier  = "NewLink"
         static let LinkCellIdentifier = "Link"
     }
     
     override func tableView(tv: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.LinkCellIdentifier, forIndexPath: indexPath)
-        
-        let data = links[indexPath.row]
-        
-        
-        
-        if let linkCell = cell as? LinkTableViewCell {
-            
-            for i in (0..<contacts.count) {
-                if contacts[i][0] == data[1] {
-                    linkCell.linkContact.text = contacts[i][2]
-                }
-            }
-            
-            //custom gesture
-            if data[2] == "01" {
-                for i in (0..<customGestures.count) {
-                    if customGestures[i][0] == data[3] {
-                        linkCell.linkGesture.text = customGestures[i][1]
+        switch(indexPath.section){
+            case 0:
+                let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.NewLinkCellIdentifier, forIndexPath: indexPath)
+                
+                return cell
+            case 1:
+                let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.LinkCellIdentifier, forIndexPath: indexPath)
+                
+                if let linkCell = cell as? LinkTableViewCell {
+                    
+                    let data = links[indexPath.row]
+                    
+                    print("BBBBBBBB")
+                    for i in (0..<contacts.count) {
+                        if contacts[i][0] == data[1] {
+                            linkCell.linkContact.text = contacts[i][2]
+                        }
+                    }
+                    
+                    //custom gesture
+                    if data[2] == "01" {
+                        for i in (0..<customGestures.count) {
+                            if customGestures[i][0] == data[3] {
+                                linkCell.linkGesture.text = customGestures[i][1]
+                            }
+                        }
+                    } else {
+                        for i in (0..<defaultGestures.count) {
+                            if defaultGestures[i][0] == data[3] {
+                                linkCell.linkGesture.text = defaultGestures[i][1]
+                            }
+                        }
+                    }
+                    
+                    
+                    //contact name
+                    var contactApp = ""
+                    for i in (0..<contacts.count) {
+                        if contacts[i][0] == data[1] {
+                            
+                            contactApp = contacts[i][1]
+                            
+                        }
+                    }
+                    
+                    for i in (0..<apps.count) {
+                        if apps[i][0] == contactApp {
+                            
+                            linkCell.linkIcon.image = UIImage(named: "\(apps[i][1].lowercaseString)" + "Icon")
+                            
+                        }
                     }
                 }
-            } else {
-                for i in (0..<defaultGestures.count) {
-                    if defaultGestures[i][0] == data[3] {
-                        linkCell.linkGesture.text = defaultGestures[i][1]
-                    }
-                }
-            }
-            
-            
-            //contact name
-            var contactApp = ""
-            for i in (0..<contacts.count) {
-                if contacts[i][0] == data[1] {
-                    
-                    contactApp = contacts[i][1]
-                    
-                }
-            }
-            
-            for i in (0..<apps.count) {
-                if apps[i][0] == contactApp {
-                    
-                linkCell.linkIcon.image = UIImage(named: "\(apps[i][1].lowercaseString)" + "Icon")
-                    
-                }
-            }
-            
-            
+                
+            return cell
+
+        default:
+            let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.NewLinkCellIdentifier, forIndexPath: indexPath)
+            return cell
         }
-        
-        return cell
     }
 
 
@@ -135,6 +143,8 @@ class LinkTableViewController: UITableViewController {
         return true
     }
     */
+    
+    
 
     /*
     // MARK: - Navigation
