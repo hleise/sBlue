@@ -1,3 +1,5 @@
+
+
 //
 //  Tables.swift
 //  sBlue
@@ -25,8 +27,10 @@ var defaultGestures : [[String]] = [["00", "Blink"],
                                     ["08", "Purple Light"],
                                     ["09", "White Light"]]
 
+//gesture slots, not gesture types, fill the rest with FFs
 // gestureID | gestureName | gesture1 | gesture2 | gesture3 | gesture4 | gesture5
-var customGestures : [[String]] = [[]]
+var customGestures : [[String]] = [["00", "Dancing", "00", "FF", "FF", "FF", "FF"],
+                                   ["01", "Walking", "01", "03", "FF", "FF", "FF"]]
 
 // appID | appName | appIdentifier
 var apps : [[String]] = [["00", "Whatsapp", "com.whatsapp"],
@@ -39,7 +43,9 @@ var apps : [[String]] = [["00", "Whatsapp", "com.whatsapp"],
                          ["07", "Twitter", "com.twitter"]]
 
 // contactID | appID | contactName
-var contacts : [[String]] = [[]]
+var contacts : [[String]] = [["00", "01", "Hunter Leise"],
+                             ["01", "07", "@andresrubiop"]]
 
-// linkId | contactID | gestureID
-var links : [[String]] = [[]]
+// linkID | contactID | gestureType | gestureID
+var links : [[String]] = [["00", "00", "01", "Walking"],
+                          ["01", "01", "01", "Dancing"]]
