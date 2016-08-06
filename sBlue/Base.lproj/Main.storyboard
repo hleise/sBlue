@@ -1479,7 +1479,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="69N-CG-cUI">
                             <connections>
-                                <segue destination="yUt-aj-3Gt" kind="unwind" unwindAction="unwindToLinks:" id="7A0-JS-wUe"/>
+                                <action selector="saveLink:" destination="wGd-lc-pCg" id="gxc-Sv-6Tp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1491,6 +1491,7 @@
                         <outlet property="deleteCell" destination="blD-Eo-cAF" id="cOJ-vW-EKK"/>
                         <outlet property="gestureNameLabel" destination="P0k-w7-eKY" id="d4X-kf-x6K"/>
                         <outlet property="linkTableViewControllerTitle" destination="ZzE-Nl-bcg" id="BIM-zL-dFX"/>
+                        <segue destination="yUt-aj-3Gt" kind="unwind" identifier="unwindToGestures" unwindAction="unwindToGestures:" id="ceN-7W-6YW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qz9-nh-uZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>

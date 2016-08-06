@@ -31,9 +31,9 @@ var defaultGestures : [[String]] = [["00", "Blink"],
 var customGestures : [[String]] = [["00", "Dancing", "00", "FF", "FF", "FF", "FF"],
                                    ["01", "Walking", "01", "03", "FF", "FF", "FF"],
                                    ["02", "Party", "01", "02", "FF", "FF", "FF"],
-                                   ["00", "Rainbow", "00", "FF", "FF", "FF", "FF"],
-                                   ["01", "Wag Tail", "01", "03", "FF", "FF", "FF"],
-                                   ["02", "Cry", "01", "02", "FF", "FF", "FF"]]
+                                   ["03", "Rainbow", "00", "FF", "FF", "FF", "FF"],
+                                   ["04", "Wag Tail", "01", "03", "FF", "FF", "FF"],
+                                   ["05", "Cry", "01", "02", "FF", "FF", "FF"]]
 
 // appID | appName | appIdentifier
 var apps : [[String]] = [["00", "Whatsapp", "com.whatsapp"],
@@ -62,15 +62,15 @@ var links : [[String]] = [["00", "00", "01", "00"],
 func lookUpGestureIDWithName(gestureName: String, gestureType: String) -> String {
     
     if gestureType == "00" {
-        for i in 0..<defaultGestures.count {
-            if defaultGestures[i][1] == gestureName {
-                return defaultGestures[i][0]
+        for gesture in defaultGestures {
+            if gesture[1] == gestureName {
+                return gesture[0]
             }
         }
     } else {
-        for i in 0..<customGestures.count {
-            if customGestures[i][1] == gestureName {
-                return customGestures[i][0]
+        for gesture in customGestures {
+            if gesture[1] == gestureName {
+                return gesture[0]
             }
         }
     }
@@ -89,7 +89,7 @@ func lookUpContactIDWithName(contactName: String) -> String {
         }
     }
     
-    return ""
+    return "FF"
 }
 
 
@@ -101,7 +101,7 @@ func lookUpAppIDWithName(appName: String) -> String {
         }
     }
     
-    return ""
+    return "FF"
 }
 
 
@@ -121,7 +121,7 @@ func lookUpGestureNameWithID(gestureID: String, gestureType: String) -> String {
         }
     }
     
-    return ""
+    return "FF"
 }
 
 
@@ -148,7 +148,22 @@ func lookUpAppNameWithID(appID: String) -> String {
     return ""
 }
 
-
+func looUpGestureTypeWithName(gestureName: String) -> String {
+    for gesture in defaultGestures {
+        if gestureName == gesture[1] {
+            return "00"
+        }
+    }
+    
+    for gesture in customGestures {
+        if gestureName == gesture[1] {
+            return "01"
+        }
+    }
+    
+    precondition(true, "Gesture name not found")
+    return "FF"
+}
 
 
 func deleteGesture(gestureName: String, gestureType: String) -> String {
