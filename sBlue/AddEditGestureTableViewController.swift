@@ -13,7 +13,7 @@ class AddEditGestureTableViewController: UITableViewController, DefaultGesturesS
     var gestureTableViewControllerType = String()
     var gestureName = String()
     var gestureSlots = [String](count: 5, repeatedValue: "None")
-    var gestureID = Int()
+    var gestureID = -1
     
     @IBOutlet weak var gestureTableViewControllerTitle: UINavigationItem!
     @IBOutlet weak var barButtonRight: UIBarButtonItem!
@@ -33,19 +33,51 @@ class AddEditGestureTableViewController: UITableViewController, DefaultGesturesS
         view.endEditing(true)
     }
     
+    @IBAction func saveGesture(sender: UIBarButtonItem) {
+        precondition(barButtonRight.title == "Done" || barButtonRight.title == "Save", "barButtonRight item \(barButtonRight.title) not recognized.")
+        
+        updateGestureName()
+        
+        if (barButtonRight.title == "Save") {
+            customGestures.append([String(customGestures.endIndex), gestureName,
+                lookUpGestureIDWithName(gestureSlots[0], gestureType: "00"),
+                lookUpGestureIDWithName(gestureSlots[1], gestureType: "00"),
+                lookUpGestureIDWithName(gestureSlots[2], gestureType: "00"),
+                lookUpGestureIDWithName(gestureSlots[3], gestureType: "00"),
+                lookUpGestureIDWithName(gestureSlots[4], gestureType: "00"),])
+        } else {
+            customGestures[gestureID][1] = gestureName
+            customGestures[gestureID][2] = lookUpGestureIDWithName(gestureSlots[0], gestureType: "00")
+            customGestures[gestureID][3] = lookUpGestureIDWithName(gestureSlots[1], gestureType: "00")
+            customGestures[gestureID][4] = lookUpGestureIDWithName(gestureSlots[2], gestureType: "00")
+            customGestures[gestureID][5] = lookUpGestureIDWithName(gestureSlots[3], gestureType: "00")
+            customGestures[gestureID][6] = lookUpGestureIDWithName(gestureSlots[4], gestureType: "00")
+        }
+        
+        performSegueWithIdentifier("unwindToGestures", sender: sender)
+    }
+    
+    func updateGestureName() {
+        gestureName = gestureNameTextField.text!
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         gestureNameTextField.text = gestureName
         var labelArray = [gesture1Label, gesture2Label, gesture3Label, gesture4Label, gesture5Label]
         for i in 0..<5 {
-            let defaultGestureID = Int(customGestures[gestureID][i + 2])
-            
-            if (defaultGestureID == nil) {
+            if gestureID == -1 {
                 labelArray[i].text = "None"
             } else {
-                gestureSlots[i] = defaultGestures[defaultGestureID!][1]
-                labelArray[i].text = gestureSlots[i]
+                let defaultGestureID = Int(customGestures[gestureID][i + 2])
+                
+                if (defaultGestureID == nil) {
+                    labelArray[i].text = "None"
+                } else {
+                    gestureSlots[i] = defaultGestures[defaultGestureID!][1]
+                    labelArray[i].text = gestureSlots[i]
+                }
             }
         }
     }

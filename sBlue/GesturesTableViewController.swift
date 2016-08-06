@@ -144,7 +144,7 @@ class GesturesTableViewController: UITableViewController {
                 
                 if let indexPath = self.tableView.indexPathForSelectedRow {
                     destination.gestureID = indexPath.row - 1 as Int
-                    destination.gestureName = "Test"
+                    destination.gestureName = customGestures[indexPath.row - 1][1]
                 }
             }
         }

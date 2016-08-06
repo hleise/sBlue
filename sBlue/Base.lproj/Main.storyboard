@@ -786,7 +786,7 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="deleteLink:" destination="YGg-qc-Ul2" eventType="touchUpInside" id="Ccm-03-X1e"/>
-                                                        <segue destination="TKb-Dw-uXU" kind="unwind" unwindAction="unwindToGestures:" id="3Bb-va-PDh"/>
+                                                        <segue destination="TKb-Dw-uXU" kind="unwind" unwindAction="unwindToGestures:" id="Wgc-V8-WRz"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -809,12 +809,12 @@
                     <navigationItem key="navigationItem" title="Title" id="LEk-gX-S9z">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="WPq-a2-LZh">
                             <connections>
-                                <segue destination="TKb-Dw-uXU" kind="unwind" unwindAction="unwindToGestures:" id="9RR-bQ-SEK"/>
+                                <segue destination="TKb-Dw-uXU" kind="unwind" unwindAction="unwindToGestures:" id="hW4-bh-Zsq"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="uXg-Lc-lMk">
                             <connections>
-                                <segue destination="TKb-Dw-uXU" kind="unwind" unwindAction="unwindToGestures:" id="IAE-NC-xuF"/>
+                                <action selector="saveGesture:" destination="YGg-qc-Ul2" id="FVl-Ub-jIv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -829,6 +829,7 @@
                         <outlet property="gesture5Label" destination="24y-59-Lcn" id="Qgh-vs-Nao"/>
                         <outlet property="gestureNameTextField" destination="RDQ-JS-1wh" id="cHv-2F-4jK"/>
                         <outlet property="gestureTableViewControllerTitle" destination="LEk-gX-S9z" id="moW-HS-qph"/>
+                        <segue destination="TKb-Dw-uXU" kind="unwind" identifier="unwindToGestures" unwindAction="unwindToGestures:" id="nKZ-62-q2O"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GYe-qe-gTS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1489,7 +1490,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="69N-CG-cUI">
                             <connections>
-                                <segue destination="yUt-aj-3Gt" kind="unwind" unwindAction="unwindToLinks:" id="7A0-JS-wUe"/>
+                                <action selector="saveLink:" destination="wGd-lc-pCg" id="gxc-Sv-6Tp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1501,6 +1502,7 @@
                         <outlet property="deleteCell" destination="blD-Eo-cAF" id="cOJ-vW-EKK"/>
                         <outlet property="gestureNameLabel" destination="P0k-w7-eKY" id="d4X-kf-x6K"/>
                         <outlet property="linkTableViewControllerTitle" destination="ZzE-Nl-bcg" id="BIM-zL-dFX"/>
+                        <segue destination="yUt-aj-3Gt" kind="unwind" identifier="unwindToGestures" unwindAction="unwindToGestures:" id="ceN-7W-6YW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qz9-nh-uZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1843,11 +1845,13 @@
                     </tableView>
                     <connections>
                         <outlet property="contactTextField" destination="74b-5o-qaa" id="5We-DZ-fFV"/>
+                        <segue destination="Ypb-e7-7z4" kind="unwind" identifier="unwindToAddEditLink" unwindAction="unwindToAddEditLink:" id="uv3-hT-nWR"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s4Q-bl-RHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ypb-e7-7z4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1739" y="-1915"/>
+            <point key="canvasLocation" x="1702" y="-1920"/>
         </scene>
         <!--Gesture-->
         <scene sceneID="Ynn-00-iwV">

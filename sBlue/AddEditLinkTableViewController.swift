@@ -9,12 +9,12 @@
 import UIKit
 
 class AddEditLinkTableViewController: UITableViewController, AppsTableViewDelegate, ContactTableViewDelegate, GestureTableViewDelegate {
-
+    
     var linkTableViewControllerType = String()
     var linkID = Int()
-    var app = "None"
-    var contact = "None"
-    var gesture = "None"
+    var app = String()
+    var contact = String()
+    var gesture = String()
     
     @IBOutlet weak var appNameLabel: UILabel!
     @IBOutlet weak var contactNameLabel: UILabel!
@@ -23,8 +23,29 @@ class AddEditLinkTableViewController: UITableViewController, AppsTableViewDelega
     @IBOutlet weak var barButtonRight: UIBarButtonItem!
     @IBOutlet weak var deleteCell: UITableViewCell!
     
+    @IBAction func unwindToAddEditLink(segue: UIStoryboardSegue) {}
+    
     @IBAction func deleteLink(sender: AnyObject) {
         links.removeAtIndex(linkID)
+    }
+    
+    @IBAction func saveLink(sender: AnyObject) {
+        precondition(barButtonRight.title == "Done" || barButtonRight.title == "Save", "barButtonRight item \(barButtonRight.title) not recognized.")
+        
+        let contactID = String(contacts.endIndex)
+        let gestureType = looUpGestureTypeWithName(gesture)
+        
+        if (barButtonRight.title == "Save") {
+            contacts.append([contactID, lookUpAppIDWithName(app), contact])
+            links.append([String(links.endIndex), contactID, gestureType, lookUpGestureIDWithName(gesture, gestureType: gestureType)])
+        } else {
+            contacts[Int(links[linkID][1])!][1] = lookUpAppIDWithName(app)
+            contacts[Int(links[linkID][1])!][2] = contact
+            links[linkID][2] = gestureType
+            links[linkID][3] = lookUpGestureIDWithName(gesture, gestureType: gestureType)
+        }
+        
+        performSegueWithIdentifier("unwindToGestures", sender: sender)
     }
     
     override func viewDidLoad() {
