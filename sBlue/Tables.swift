@@ -76,7 +76,7 @@ func lookUpGestureIDWithName(gestureName: String, gestureType: String) -> String
     }
     
     
-    return ""
+    return "FF"
 }
 
 
