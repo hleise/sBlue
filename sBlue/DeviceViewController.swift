@@ -16,7 +16,7 @@ class DeviceViewController: UIViewController {
     @IBOutlet weak var connectionLabel: UIBarButtonItem!
     
     @IBAction func sendSomething(sender: UIBarButtonItem) {
-        sendCode("03")
+        sendCode("00")
     }
     
     var timerTXDelay: NSTimer?
@@ -34,7 +34,7 @@ class DeviceViewController: UIViewController {
     {
         print("selected characteristic: \(selectedCharacteristic)")
         if self.selectedCharacteristic == nil {
-            chosenCharacteristic = 0
+            chosenCharacteristic = 4
         }
         
         // Watch Bluetooth connection

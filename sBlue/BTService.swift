@@ -12,7 +12,7 @@ import CoreBluetooth
 var chosenCharacteristic : Int? = nil
 
 /* Services & Characteristics UUIDs */
-let BLEServiceUUID = CBUUID(string: "B8DD6091-F051-B715-6B1E-EF10A2AA9F7A")
+let BLEServiceUUID = CBUUID(string: "A7DD6091-F051-B715-6B1E-EF10A2AA9F7A")
 
 let PositionCharUUID = CBUUID(string: "A7DD6091-F051-B715-6B1E-EF10A2AA9F7B")
 let PositionCharUUID1 = CBUUID(string: "A7DD6091-F051-B715-6B1E-EF10A2AA9F7C")
@@ -20,9 +20,9 @@ let PositionCharUUID2 = CBUUID(string: "A7DD6091-F051-B715-6B1E-EF10A2AA9F7D")
 let PositionCharUUID3 = CBUUID(string: "A7DD6091-F051-B715-6B1E-EF10A2AA9F7E")
 
 
-let BLEServiceUUID2 = CBUUID(string: "A7DD6091-F051-B715-6B1E-EF10A2AA9F7A")
+let BLEServiceUUID2 = CBUUID(string: "B8DD6091-F051-B715-6B1E-EF10A2AA9F7A")
 
-let PositionCharUUID4 = CBUUID(string: "A7DD6091-F051-B715-6B1E-EF10A2AA9F7F")
+let PositionCharUUID4 = CBUUID(string: "A7DD6091-F051-B715-6B1E-EF10A2AA9F8F")
 
 
 let BLEServiceChangedStatusNotification = "kBLEServiceChangedStatusNotification"
@@ -31,7 +31,7 @@ class BTService: NSObject, CBPeripheralDelegate {
   
     var peripheral: CBPeripheral?
     
-    var blueCharacteristics: [CBCharacteristic?] = [nil]
+    var blueCharacteristics: [CBCharacteristic?] = [CBCharacteristic]()
   
     init(initWithPeripheral peripheral: CBPeripheral) {
         super.init()
@@ -79,12 +79,12 @@ class BTService: NSObject, CBPeripheralDelegate {
         }
         
         for service in peripheral.services! {
-//            if service.UUID == BLEServiceUUID {
-//                peripheral.discoverCharacteristics(uuidsForBTService, forService: service)
-//            }
-            if service.UUID == BLEServiceUUID2 {
+            if service.UUID == BLEServiceUUID {
                 peripheral.discoverCharacteristics(uuidsForBTService, forService: service)
             }
+//            if service.UUID == BLEServiceUUID2 {
+//                peripheral.discoverCharacteristics(uuidsForBTService, forService: service)
+//            }
         }
     }
       
