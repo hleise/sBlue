@@ -33,6 +33,25 @@ class AddEditGestureTableViewController: UITableViewController, DefaultGesturesS
         view.endEditing(true)
     }
     
+    @IBAction func saveGesture(sender: UIBarButtonItem) {
+        precondition(barButtonRight.title == "Done" || barButtonRight.title == "Save", "barButtonRight item \(barButtonRight.title) not recognized.")
+        
+        print("saveGesture called")
+        updateGestureName()
+        
+        if (barButtonRight.title == "Save") {
+            customGestures.append(["05", gestureName, "00", "FF", "FF", "FF", "FF"])
+        } else {
+            customGestures[gestureID][1] = gestureName
+        }
+        
+        performSegueWithIdentifier("unwindToGestures", sender: sender)
+    }
+    
+    func updateGestureName() {
+        gestureName = gestureNameTextField.text!
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
