@@ -26,6 +26,7 @@ class AddEditLinkTableViewController: UITableViewController, AppsTableViewDelega
     @IBAction func unwindToAddEditLink(segue: UIStoryboardSegue) {}
     
     @IBAction func deleteLink(sender: AnyObject) {
+        contacts.removeAtIndex(Int(links[linkID][1])!)
         links.removeAtIndex(linkID)
     }
     
