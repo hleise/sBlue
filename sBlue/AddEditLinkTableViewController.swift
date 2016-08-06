@@ -48,16 +48,14 @@ class AddEditLinkTableViewController: UITableViewController, AppsTableViewDelega
         if (linkTableViewControllerType == "Add Link") {
             barButtonRight.title = "Save"
             deleteCell.hidden = true
-            appNameLabel.text = app
-            contactNameLabel.text = contact
-            gestureNameLabel.text = gesture
         } else {
             barButtonRight.title = "Done"
             deleteCell.hidden = false
-            appNameLabel.text = app
-            contactNameLabel.text = contact
-            gestureNameLabel.text = gesture
         }
+        
+        appNameLabel.text = app
+        contactNameLabel.text = contact
+        gestureNameLabel.text = gesture
     }
 
     override func didReceiveMemoryWarning() {
