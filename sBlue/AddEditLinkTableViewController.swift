@@ -9,12 +9,12 @@
 import UIKit
 
 class AddEditLinkTableViewController: UITableViewController, AppsTableViewDelegate, ContactTableViewDelegate, GestureTableViewDelegate {
-
+    
     var linkTableViewControllerType = String()
     var linkID = Int()
-    var app = "None"
-    var contact = "None"
-    var gesture = "None"
+    var app = String()
+    var contact = String()
+    var gesture = String()
     
     @IBOutlet weak var appNameLabel: UILabel!
     @IBOutlet weak var contactNameLabel: UILabel!
@@ -22,6 +22,8 @@ class AddEditLinkTableViewController: UITableViewController, AppsTableViewDelega
     @IBOutlet weak var linkTableViewControllerTitle: UINavigationItem!
     @IBOutlet weak var barButtonRight: UIBarButtonItem!
     @IBOutlet weak var deleteCell: UITableViewCell!
+    
+    @IBAction func unwindToAddEditLink(segue: UIStoryboardSegue) {}
     
     @IBAction func deleteLink(sender: AnyObject) {
         links.removeAtIndex(linkID)

@@ -23,8 +23,8 @@ class ContactTableViewController: UITableViewController {
         if (delegate != nil) && (contactTextField.text != nil) {
             delegate!.setContactName(contactTextField.text!)
         }
+        performSegueWithIdentifier("unwindToAddEditLink", sender: self)
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +36,13 @@ class ContactTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         contactTextField.text = contactName
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        if (delegate != nil) && (contactTextField.text != nil) {
+            delegate!.setContactName(contactTextField.text!)
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -1834,11 +1834,13 @@
                     </tableView>
                     <connections>
                         <outlet property="contactTextField" destination="74b-5o-qaa" id="5We-DZ-fFV"/>
+                        <segue destination="Ypb-e7-7z4" kind="unwind" identifier="unwindToAddEditLink" unwindAction="unwindToAddEditLink:" id="uv3-hT-nWR"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s4Q-bl-RHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ypb-e7-7z4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1739" y="-1915"/>
+            <point key="canvasLocation" x="1702" y="-1920"/>
         </scene>
         <!--Gesture-->
         <scene sceneID="Ynn-00-iwV">
