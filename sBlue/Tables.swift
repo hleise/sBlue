@@ -53,3 +53,93 @@ var contacts : [[String]] = [["00", "01", "Hunter Leise"],
 var links : [[String]] = [["00", "00", "01", "00"],
                           ["01", "01", "01", "01"],
                           ["02", "02", "00", "08"]]
+
+
+
+func lookUpDefaultGestureIDWithName(gestureName: String) -> String {
+    
+    for i in 0..<defaultGestures.count {
+        if defaultGestures[i][1] = gestureName {
+            return defaultGestures[i][0]
+        }
+    }
+    
+    return ""
+}
+
+
+func lookUpContactIDWithName(contactName: String) -> String {
+    
+    for i in 0..<contacts.count {
+        if contacts[i][2] = contactName {
+            return contacts[i][0]
+        }
+    }
+    
+    return ""
+}
+
+
+func lookUpAppIDWithName(appName: String) -> String {
+    
+    for i in 0..<apps.count {
+        if apps[i][1] = appName {
+            return apps[i][0]
+        }
+    }
+    
+    return ""
+}
+
+
+func lookUpDefaultGestureNameWithID(gestureID: String) -> String {
+    
+    for i in 0..<defaultGestures.count {
+        if defaultGestures[i][0] = gestureID {
+            return defaultGestures[i][1]
+        }
+    }
+    
+    return ""
+}
+
+
+func lookUpContactNameWithID(contactID: String) -> String {
+    
+    for i in 0..<contacts.count {
+        if contacts[i][0] = contactName {
+            return contacts[i][2]
+        }
+    }
+    
+    return ""
+}
+
+
+func lookUpAppNameWithID(appID: String) -> String {
+    
+    for i in 0..<apps.count {
+        if apps[i][0] = appName {
+            return apps[i][1]
+        }
+    }
+    
+    return ""
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
