@@ -64,7 +64,9 @@ class AppsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        delegate!.setAppName(apps[indexPath.row][1])
+        if delegate != nil {
+            delegate!.setAppName(apps[indexPath.row][1])
+        }
         
         let data = apps[indexPath.row]
         appName = data[1]

@@ -8,11 +8,23 @@
 
 import UIKit
 
+protocol ContactTableViewDelegate: class {
+    func setContactName(contactName: String)
+}
+
 class ContactTableViewController: UITableViewController {
     
+    weak var delegate : ContactTableViewDelegate?
     var contactName = String()
 
     @IBOutlet weak var contactTextField: UITextField!
+    
+    @IBAction func sendContactNameToDelegate(sender: AnyObject) {
+        if (delegate != nil) && (contactTextField.text != nil) {
+            delegate!.setContactName(contactTextField.text!)
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
