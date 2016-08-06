@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddEditLinkTableViewController: UITableViewController, AppsTableViewDelegate, ContactTableViewDelegate {
+class AddEditLinkTableViewController: UITableViewController, AppsTableViewDelegate, ContactTableViewDelegate, GestureTableViewDelegate {
 
     var linkTableViewControllerType = String()
     var linkID = Int()
@@ -125,6 +125,10 @@ class AddEditLinkTableViewController: UITableViewController, AppsTableViewDelega
     func setContactName(contactName: String) {
         contact = contactName
     }
+    
+    func setGestureName(gestureName: String) {
+        gesture = gestureName
+    }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "toSelectApp") {
@@ -140,6 +144,7 @@ class AddEditLinkTableViewController: UITableViewController, AppsTableViewDelega
         } else if (segue.identifier == "toSelectGesture"){
             if let destination = segue.destinationViewController as? GestureSelectionTableViewController {
                 destination.gestureName = gesture
+                destination.delegate = self
             }
         }
     }

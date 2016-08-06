@@ -8,8 +8,13 @@
 
 import UIKit
 
+protocol GestureTableViewDelegate: class {
+    func setGestureName(gestureName: String)
+}
+
 class GestureSelectionTableViewController: UITableViewController {
     
+    weak var delegate : GestureTableViewDelegate?
     var gestureName = String()
 
     override func viewDidLoad() {
@@ -105,6 +110,15 @@ class GestureSelectionTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if delegate != nil {
+            if (indexPath.section == 0) {
+                delegate!.setGestureName(customGestures[indexPath.row][1])
+            } else if (indexPath.section == 1) {
+                delegate!.setGestureName(defaultGestures[indexPath.row][1])
+            }
+        }
+        
         precondition(indexPath.section == 0 || indexPath.section == 1, "Unknown Index Path Section \(indexPath.section)")
         
         if (indexPath.section == 0) {
