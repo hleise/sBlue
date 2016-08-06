@@ -5,7 +5,7 @@
 //  Created by Hunter Leise on 8/4/16.
 //  Copyright © 2016 Vivo Applications. All rights reserved.
 //
-
+    
 import Foundation
     
 // commandName | commandID
@@ -165,6 +165,16 @@ func looUpGestureTypeWithName(gestureName: String) -> String {
     return "FF"
 }
 
+func lookUpContactIndexWithContactID(contactID: String) -> Int {
+    for i in 0..<contacts.count {
+        if contacts[i][0] == contactID {
+            return i
+        }
+    }
+    precondition(true, "Contact index not found")
+    return -1
+}
+
 
 func deleteGesture(gestureName: String, gestureType: String) -> String {
     
@@ -185,20 +195,3 @@ func deleteGesture(gestureName: String, gestureType: String) -> String {
     
     return code
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

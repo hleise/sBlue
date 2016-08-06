@@ -12,9 +12,9 @@ class AddEditLinkTableViewController: UITableViewController, AppsTableViewDelega
     
     var linkTableViewControllerType = String()
     var linkID = Int()
-    var app = String()
-    var contact = String()
-    var gesture = String()
+    var app = "None"
+    var contact = "None"
+    var gesture = "None"
     
     @IBOutlet weak var appNameLabel: UILabel!
     @IBOutlet weak var contactNameLabel: UILabel!
@@ -26,7 +26,7 @@ class AddEditLinkTableViewController: UITableViewController, AppsTableViewDelega
     @IBAction func unwindToAddEditLink(segue: UIStoryboardSegue) {}
     
     @IBAction func deleteLink(sender: AnyObject) {
-        contacts.removeAtIndex(Int(links[linkID][1])!)
+        contacts.removeAtIndex(lookUpContactIndexWithContactID(links[linkID][1]))
         links.removeAtIndex(linkID)
     }
     
