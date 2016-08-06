@@ -7,11 +7,11 @@
 //
 
 import Foundation
-
+    
 // commandName | commandID
-var commands : [[String]] = [["modify", "00"],
-                             ["clear", "01"],
-                             ["query", "02"]]
+var commands : [String:String] = ["modify": "00",
+                             "clear": "01",
+                             "query": "02"]
 
 // gestureElementID | gestureElementName
 var defaultGestures : [[String]] = [["00", "Blink"],
@@ -24,6 +24,7 @@ var defaultGestures : [[String]] = [["00", "Blink"],
                                     ["07", "Orange Light"],
                                     ["08", "Purple Light"],
                                     ["09", "White Light"]]
+
 
 //gesture slots, not gesture types, fill the rest with FFs
 // gestureID | gestureName | gesture1 | gesture2 | gesture3 | gesture4 | gesture5 
@@ -49,6 +50,8 @@ var contacts : [[String]] = [["00", "01", "Hunter Leise"],
                              ["01", "07", "@andresrubiop"],
                              ["02", "07", "@ViveFaux"]]
 
+//gestureType 01 = custom
+//00 default
 // linkID | contactID | gestureType | gestureID
 var links : [[String]] = [["00", "00", "01", "00"],
                           ["01", "01", "01", "01"],
@@ -56,22 +59,32 @@ var links : [[String]] = [["00", "00", "01", "00"],
 
 
 
-func lookUpDefaultGestureIDWithName(gestureName: String) -> String {
+func lookUpGestureIDWithName(gestureName: String, gestureType: String) -> String {
     
-    for i in 0..<defaultGestures.count {
-        if defaultGestures[i][1] = gestureName {
-            return defaultGestures[i][0]
+    if gestureType == "00" {
+        for i in 0..<defaultGestures.count {
+            if defaultGestures[i][1] == gestureName {
+                return defaultGestures[i][0]
+            }
+        }
+    } else {
+        for i in 0..<customGestures.count {
+            if customGestures[i][1] == gestureName {
+                return customGestures[i][0]
+            }
         }
     }
+    
     
     return ""
 }
 
 
+
 func lookUpContactIDWithName(contactName: String) -> String {
     
     for i in 0..<contacts.count {
-        if contacts[i][2] = contactName {
+        if contacts[i][2] == contactName {
             return contacts[i][0]
         }
     }
@@ -83,7 +96,7 @@ func lookUpContactIDWithName(contactName: String) -> String {
 func lookUpAppIDWithName(appName: String) -> String {
     
     for i in 0..<apps.count {
-        if apps[i][1] = appName {
+        if apps[i][1] == appName {
             return apps[i][0]
         }
     }
@@ -92,11 +105,19 @@ func lookUpAppIDWithName(appName: String) -> String {
 }
 
 
-func lookUpDefaultGestureNameWithID(gestureID: String) -> String {
+func lookUpGestureNameWithID(gestureID: String, gestureType: String) -> String {
     
-    for i in 0..<defaultGestures.count {
-        if defaultGestures[i][0] = gestureID {
-            return defaultGestures[i][1]
+    if gestureType == "00" {
+        for i in 0..<defaultGestures.count {
+            if defaultGestures[i][0] == gestureID {
+                return defaultGestures[i][1]
+            }
+        }
+    } else {
+        for i in 0..<customGestures.count {
+            if customGestures[i][0] == gestureID {
+                return customGestures[i][1]
+            }
         }
     }
     
@@ -107,7 +128,7 @@ func lookUpDefaultGestureNameWithID(gestureID: String) -> String {
 func lookUpContactNameWithID(contactID: String) -> String {
     
     for i in 0..<contacts.count {
-        if contacts[i][0] = contactName {
+        if contacts[i][0] == contactID {
             return contacts[i][2]
         }
     }
@@ -119,12 +140,35 @@ func lookUpContactNameWithID(contactID: String) -> String {
 func lookUpAppNameWithID(appID: String) -> String {
     
     for i in 0..<apps.count {
-        if apps[i][0] = appName {
+        if apps[i][0] == appID {
             return apps[i][1]
         }
     }
     
     return ""
+}
+
+
+
+
+func deleteGesture(gestureName: String, gestureType: String) -> String {
+    
+    var code = ""
+    
+    if let command = commands["clear"] {
+        code = command
+    }
+    
+    if gestureType == "default" {
+        code += lookUpGestureIDWithName(gestureName, gestureType: "00")
+    } else {
+        code += lookUpGestureIDWithName(gestureName, gestureType: "01")
+
+    }
+    
+    code += "FFFF"
+    
+    return code
 }
 
 

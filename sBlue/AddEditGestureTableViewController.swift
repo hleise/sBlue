@@ -64,11 +64,11 @@ class AddEditGestureTableViewController: UITableViewController, DefaultGesturesS
         } else {
             barButtonRight.title = "Done"
             deleteCell.hidden = false
-            
-            var labelArray = [gesture1Label, gesture2Label, gesture3Label, gesture4Label, gesture5Label]
-            for i in 0..<5 {
-                labelArray[i].text = gestureSlots[i]
-            }
+        }
+        
+        var labelArray = [gesture1Label, gesture2Label, gesture3Label, gesture4Label, gesture5Label]
+        for i in 0..<5 {
+            labelArray[i].text = gestureSlots[i]
         }
     }
 
