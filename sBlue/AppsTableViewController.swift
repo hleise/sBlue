@@ -8,8 +8,13 @@
 
 import UIKit
 
+protocol AppsTableViewDelegate {
+    func setAppName(appName: String)
+}
+
 class AppsTableViewController: UITableViewController {
     
+    var delegate : AppsTableViewDelegate! = nil
     var appName = String()
 
     override func viewDidLoad() {
@@ -58,6 +63,8 @@ class AppsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        delegate.setAppName(apps[indexPath.row][1])
         
         let data = apps[indexPath.row]
         appName = data[1]

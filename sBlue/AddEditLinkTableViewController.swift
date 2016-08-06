@@ -8,13 +8,13 @@
 
 import UIKit
 
-class AddEditLinkTableViewController: UITableViewController {
+class AddEditLinkTableViewController: UITableViewController, AppsTableViewDelegate {
 
     var linkTableViewControllerType = String()
     var linkID = Int()
-    var app = String()
-    var contact = String()
-    var gesture = String()
+    var app = "None"
+    var contact = "None"
+    var gesture = "None"
     
     @IBOutlet weak var appNameLabel: UILabel!
     @IBOutlet weak var contactNameLabel: UILabel!
@@ -48,6 +48,9 @@ class AddEditLinkTableViewController: UITableViewController {
         if (linkTableViewControllerType == "Add Link") {
             barButtonRight.title = "Save"
             deleteCell.hidden = true
+            appNameLabel.text = app
+            contactNameLabel.text = contact
+            gestureNameLabel.text = gesture
         } else {
             barButtonRight.title = "Done"
             deleteCell.hidden = false
@@ -116,11 +119,16 @@ class AddEditLinkTableViewController: UITableViewController {
         return true
     }
     */
+    
+    func setAppName(appName: String) {
+        app = appName
+    }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "toSelectApp") {
             let destination = segue.destinationViewController as! AppsTableViewController
             destination.appName = app
+            destination.delegate = self
         } else if (segue.identifier == "toSelectContact"){
             let destination = segue.destinationViewController as! ContactTableViewController
             destination.contactName = contact
