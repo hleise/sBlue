@@ -8,11 +8,11 @@
 
 import UIKit
 
-class AddEditGestureTableViewController: UITableViewController {
+class AddEditGestureTableViewController: UITableViewController, DefaultGesturesSelectionTableViewDelegate {
 
     var gestureTableViewControllerType = String()
-    var gestureName = String()
-    var defaultGestureName = String()
+    var gestureSlot = String()
+    var gestureNames = [String](count: 5, repeatedValue: "None")
     var gestureID = Int()
     
     @IBOutlet weak var gestureTableViewControllerTitle: UINavigationItem!
@@ -30,12 +30,18 @@ class AddEditGestureTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        var labelArray = [gesture1Label, gesture2Label, gesture3Label, gesture4Label, gesture5Label]
+        for i in 0..<5 {
+            let defaultGestureID = Int(customGestures[gestureID][i + 2])
+            
+            if (defaultGestureID == nil) {
+                labelArray[i].text = "None"
+            } else {
+                gestureNames[i] = defaultGestures[defaultGestureID!][1]
+                labelArray[i].text = gestureNames[i]
+            }
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -55,14 +61,7 @@ class AddEditGestureTableViewController: UITableViewController {
             
             var labelArray = [gesture1Label, gesture2Label, gesture3Label, gesture4Label, gesture5Label]
             for i in 0..<5 {
-                let defaultGestureID = Int(customGestures[gestureID][i + 2])
-                
-                if (defaultGestureID == nil) {
-                    labelArray[i].text = "None"
-                } else {
-                    defaultGestureName = defaultGestures[defaultGestureID!][1]
-                    labelArray[i].text = defaultGestureName
-                }
+                labelArray[i].text = gestureNames[i]
             }
         }
     }
@@ -126,6 +125,10 @@ class AddEditGestureTableViewController: UITableViewController {
         return true
     }
     */
+    
+    func setDefaultGesture(defaultGestureName: String, gestureNum: Int) {
+        gestureNames[gestureNum] = defaultGestureName
+    }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "toSelectDefaultGesture") {
@@ -137,6 +140,8 @@ class AddEditGestureTableViewController: UITableViewController {
                 if (defaultGestureID != nil) {
                     destination.gestureName = defaultGestures[defaultGestureID!][1]
                 }
+                destination.gestureNum = indexPath.row
+                destination.delegate = self
             }
         }
     }

@@ -8,9 +8,15 @@
 
 import UIKit
 
+protocol DefaultGesturesSelectionTableViewDelegate: class {
+    func setDefaultGesture(defaultGestureName: String, gestureNum: Int)
+}
+
 class DefaultGestureSelectionTableViewController: UITableViewController {
 
+    weak var delegate : DefaultGesturesSelectionTableViewDelegate?
     var gestureName = String()
+    var gestureNum = Int()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +65,10 @@ class DefaultGestureSelectionTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if delegate != nil {
+            delegate!.setDefaultGesture(defaultGestures[indexPath.row][1], gestureNum: gestureNum)
+        }
+        
         let data = defaultGestures[indexPath.row]
         gestureName = data[1]
         
