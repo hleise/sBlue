@@ -139,11 +139,13 @@ class GesturesTableViewController: UITableViewController {
             let destination = segue.destinationViewController as! AddEditGestureTableViewController
             destination.gestureTableViewControllerType = "Add Gesture"
         } else {
-            let destination = segue.destinationViewController as! AddEditGestureTableViewController
-            destination.gestureTableViewControllerType = "Edit Gesture"
-            
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-                destination.gestureID = indexPath.row - 1 as Int
+            if let destination = segue.destinationViewController as? AddEditGestureTableViewController {
+                destination.gestureTableViewControllerType = "Edit Gesture"
+                
+                if let indexPath = self.tableView.indexPathForSelectedRow {
+                    destination.gestureID = indexPath.row - 1 as Int
+                    destination.gestureName = "Test"
+                }
             }
         }
     }
