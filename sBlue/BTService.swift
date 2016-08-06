@@ -12,14 +12,18 @@ import CoreBluetooth
 var chosenCharacteristic : Int? = nil
 
 /* Services & Characteristics UUIDs */
-let BLEServiceUUID = CBUUID(string: "A7DD6091-F051-B715-6B1E-EF10A2AA9F7A")
+let BLEServiceUUID = CBUUID(string: "B8DD6091-F051-B715-6B1E-EF10A2AA9F7A")
+
 let PositionCharUUID = CBUUID(string: "A7DD6091-F051-B715-6B1E-EF10A2AA9F7B")
 let PositionCharUUID1 = CBUUID(string: "A7DD6091-F051-B715-6B1E-EF10A2AA9F7C")
 let PositionCharUUID2 = CBUUID(string: "A7DD6091-F051-B715-6B1E-EF10A2AA9F7D")
 let PositionCharUUID3 = CBUUID(string: "A7DD6091-F051-B715-6B1E-EF10A2AA9F7E")
 
-let BLEServiceUUID2 = CBUUID(string: "B7DD6091-F051-B715-6B1E-EF10A2AA9F7A")
-let PositionCharUUID4 = CBUUID(string: "B7DD6091-F051-B715-6B1E-EF10A2AA9F7B")
+
+let BLEServiceUUID2 = CBUUID(string: "A7DD6091-F051-B715-6B1E-EF10A2AA9F7A")
+
+let PositionCharUUID4 = CBUUID(string: "A7DD6091-F051-B715-6B1E-EF10A2AA9F7F")
+
 
 let BLEServiceChangedStatusNotification = "kBLEServiceChangedStatusNotification"
 
@@ -41,6 +45,7 @@ class BTService: NSObject, CBPeripheralDelegate {
     }
   
     func startDiscoveringServices() {
+        //put services in this array
         self.peripheral?.discoverServices([BLEServiceUUID, BLEServiceUUID2])
     }
   
@@ -57,6 +62,7 @@ class BTService: NSObject, CBPeripheralDelegate {
       
     func peripheral(peripheral: CBPeripheral, didDiscoverServices error: NSError?) {
         let uuidsForBTService: [CBUUID] = [PositionCharUUID, PositionCharUUID1, PositionCharUUID2, PositionCharUUID3, PositionCharUUID4]
+        //let uuidsForBTService2: [CBUUID] = [PositionCharUUID4]
         
         if (peripheral != self.peripheral) {
           // Wrong Peripheral
@@ -73,9 +79,9 @@ class BTService: NSObject, CBPeripheralDelegate {
         }
         
         for service in peripheral.services! {
-            if service.UUID == BLEServiceUUID {
-                peripheral.discoverCharacteristics(uuidsForBTService, forService: service)
-            }
+//            if service.UUID == BLEServiceUUID {
+//                peripheral.discoverCharacteristics(uuidsForBTService, forService: service)
+//            }
             if service.UUID == BLEServiceUUID2 {
                 peripheral.discoverCharacteristics(uuidsForBTService, forService: service)
             }
@@ -95,6 +101,8 @@ class BTService: NSObject, CBPeripheralDelegate {
         if let characteristics = service.characteristics {
           for (index, characteristic) in characteristics.enumerate()
           {
+            print(service.characteristics?.count)
+            print(characteristics.enumerate())
             print("\(characteristics[index].UUID)")
             
             //keep a list of all characteristics. (very first element here is nil I think)
@@ -108,23 +116,58 @@ class BTService: NSObject, CBPeripheralDelegate {
             
             
           }
+            
+            
         }
       }
       
     // Mark: - Private
       
-    func writeCode(code: UInt) {
+    func writeCode(code: String) {
         print("writeposition: \(code)")
         // See if characteristic has been discovered before writing to it
         if chosenCharacteristic != nil {
+            //this is the current characteristic
             if let blueCharacteristic = self.blueCharacteristics[chosenCharacteristic!] {
                 // Need a mutable var to pass to writeValue function
                 //little endian
+
+//                let codeArray : [UInt8] = Array(code.utf8)
+//                print(codeArray)
+                //to utf8 decimals
                 
-                var codeValue = code
+                
+//                let string = "00020505"
+//                
+                //array of uint8s
+                var numbers = [UInt8]()
+                
+                var from = code.startIndex
+                while from != code.endIndex {
+                    let to = from.advancedBy(2, limit: code.endIndex)
+                    numbers.append(UInt8(code[from ..< to], radix: 16) ?? 0)
+                    from = to
+                }
+//
+                print(numbers)
+                
+//                let hex1 = String(format:"%02X", 0) // 00
+//                let hex2 = String(format:"%02X", 2) // 00
+//                let hex3 = String(format:"%02X", 5) // 00
+//                let hex4 = String(format:"%02X", 5) // 00
+
+                
                 
                 //Keep this as UInt8 in NSData
-                let data = NSData(bytes: &codeValue, length: sizeof(UInt8))
+                
+                
+                //let data = NSData(bytes: &codeValue, length: sizeof(UInt8))
+                
+                
+                //send as byte array
+                let data = NSData(bytes: numbers, length: 4)
+                //let data = NSData(bytes: bytesArray , length: 4)
+                
                 
                 //without response for Arduino Uno
                 //with response for Arduino 101

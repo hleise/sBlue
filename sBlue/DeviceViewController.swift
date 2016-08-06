@@ -11,12 +11,120 @@ import UIKit
 class DeviceViewController: UIViewController {
     @IBOutlet weak var linksTableView: UIView!
     @IBOutlet weak var gesturesTableView: UIView!
+    
+    
+    @IBOutlet weak var connectionLabel: UIBarButtonItem!
+    
+    @IBAction func sendSomething(sender: UIBarButtonItem) {
+        sendCode("03")
+    }
+    
+    var timerTXDelay: NSTimer?
+    var allowTX = true
+    var selectedCharacteristic : Int? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    override func viewWillAppear(animated: Bool)
+    {
+        print("selected characteristic: \(selectedCharacteristic)")
+        if self.selectedCharacteristic == nil {
+            chosenCharacteristic = 0
+        }
+        
+        // Watch Bluetooth connection
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(DeviceViewController.connectionChanged(_:)), name: BLEServiceChangedStatusNotification, object: nil)
+        
+        // Start the Bluetooth discovery process
+        btDiscoverySharedInstance
+        
+        connectionLabel.title = "\(selectedCharacteristic)"
+    
+    }
+    
+    
+    //deinit called right before MVC leaves the heap
+    deinit {
+        //btDiscoverySharedInstance.bleService?.reset()
+        print("deallocated")
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: BLEServiceChangedStatusNotification, object: nil)
+        
+        
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.stopTimerTXDelay()
+    }
+    
+    func connectionChanged(notification: NSNotification) {
+        // Connection status changed. Indicate on GUI.
+        let userInfo = notification.userInfo as! [String: Bool]
+        
+        dispatch_async(dispatch_get_main_queue(), {
+            if let isConnected: Bool = userInfo["isConnected"] {
+                if isConnected {
+                    if (self.connectionLabel != nil) {
+                        self.connectionLabel.title = "\(self.selectedCharacteristic)"
+                    }
+                    
+                    print("connected")
+                    
+                    // Send current slider position
+                    //self.sendGesture(UInt( self.positionSlider.value))
+                } else if (self.connectionLabel != nil) {
+                    self.connectionLabel.title = "✕"
+                    print("disconnected")
+                    
+                }
+            }
+        });
+    }
+    
+    // Valid position range: 0 to 180
+    func sendCode(code: String) {
+        if !allowTX {
+            return
+        }
+        
+        // Send code to BLE Shield (if service exists and is connected)
+        if let bleService = btDiscoverySharedInstance.bleService {
+            bleService.writeCode(code)
+            
+            // Start delay timer
+            allowTX = false
+            if timerTXDelay == nil {
+                timerTXDelay = NSTimer.scheduledTimerWithTimeInterval(0.1,
+                                                                      target: self,
+                                                                      selector: #selector(DeviceViewController.timerTXDelayElapsed),
+                                                                      userInfo: nil,
+                                                                      repeats: false)
+            }
+        }
+    }
+    
+    func timerTXDelayElapsed() {
+        self.allowTX = true
+        self.stopTimerTXDelay()
+        
+    }
+    
+    func stopTimerTXDelay() {
+        if self.timerTXDelay == nil {
+            return
+        }
+        
+        timerTXDelay?.invalidate()
+        self.timerTXDelay = nil
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

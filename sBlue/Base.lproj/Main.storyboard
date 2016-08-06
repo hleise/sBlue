@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--sBlue-->
@@ -187,9 +188,19 @@
                                 <action selector="showComponent:" destination="LCg-Lg-hen" eventType="valueChanged" id="TZa-eP-wKp"/>
                             </connections>
                         </segmentedControl>
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="urF-4i-CUA"/>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="search" id="urF-4i-CUA">
+                                <connections>
+                                    <action selector="sendSomething:" destination="LCg-Lg-hen" id="3Sj-Q7-ghO"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="✕" id="1zM-9V-wvn">
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="connectionLabel" destination="1zM-9V-wvn" id="lEv-yC-gv9"/>
                         <outlet property="gesturesTableView" destination="6pa-70-tJ1" id="qUz-IE-oz2"/>
                         <outlet property="linksTableView" destination="bzI-YX-WEI" id="Fy1-40-y40"/>
                     </connections>

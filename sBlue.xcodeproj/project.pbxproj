@@ -27,9 +27,9 @@
 		5AF0F7811D41799D00543404 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AF0F77F1D41799D00543404 /* LaunchScreen.storyboard */; };
 		5AF0F78C1D41799E00543404 /* sBlueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0F78B1D41799E00543404 /* sBlueTests.swift */; };
 		5AF0F7971D41799E00543404 /* sBlueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0F7961D41799E00543404 /* sBlueUITests.swift */; };
-		5AF99C4E1D53D78E0049D204 /* BTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF99C4C1D53D78E0049D204 /* BTService.swift */; };
 		5AF99C4F1D53D78E0049D204 /* BTDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF99C4D1D53D78E0049D204 /* BTDiscovery.swift */; };
 		5AF99C521D53E7AB0049D204 /* Tables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF99C511D53E7AB0049D204 /* Tables.swift */; };
+		DFD826701D5657D2009E406B /* BTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD8266F1D5657D2009E406B /* BTService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,9 +76,9 @@
 		5AF0F7921D41799E00543404 /* sBlueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sBlueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AF0F7961D41799E00543404 /* sBlueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sBlueUITests.swift; sourceTree = "<group>"; };
 		5AF0F7981D41799E00543404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5AF99C4C1D53D78E0049D204 /* BTService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTService.swift; sourceTree = "<group>"; };
 		5AF99C4D1D53D78E0049D204 /* BTDiscovery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTDiscovery.swift; sourceTree = "<group>"; };
 		5AF99C511D53E7AB0049D204 /* Tables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tables.swift; sourceTree = "<group>"; };
+		DFD8266F1D5657D2009E406B /* BTService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +172,7 @@
 		5AF99C501D53D7950049D204 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				5AF99C4C1D53D78E0049D204 /* BTService.swift */,
+				DFD8266F1D5657D2009E406B /* BTService.swift */,
 				5AF99C4D1D53D78E0049D204 /* BTDiscovery.swift */,
 			);
 			name = Classes;
@@ -324,9 +324,9 @@
 				5AF0F7751D41799D00543404 /* AppDelegate.swift in Sources */,
 				5A387B321D54E6210064D35E /* AppsTableViewController.swift in Sources */,
 				5A4E63031D554E7A00108225 /* DefaultGestureSelectionTableViewController.swift in Sources */,
+				DFD826701D5657D2009E406B /* BTService.swift in Sources */,
 				5AF99C521D53E7AB0049D204 /* Tables.swift in Sources */,
 				5AF99C4F1D53D78E0049D204 /* BTDiscovery.swift in Sources */,
-				5AF99C4E1D53D78E0049D204 /* BTService.swift in Sources */,
 				5A387B281D54D7E90064D35E /* GestureSelectionTableViewController.swift in Sources */,
 				5A51604D1D43BCAC00053199 /* DeviceViewController.swift in Sources */,
 				5A387B381D54FBFD0064D35E /* AddEditLinkTableViewController.swift in Sources */,
