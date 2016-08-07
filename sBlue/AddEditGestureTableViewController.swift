@@ -39,19 +39,21 @@ class AddEditGestureTableViewController: UITableViewController, DefaultGesturesS
         updateGestureName()
         
         if (barButtonRight.title == "Save") {
-            customGestures.append([String(customGestures.endIndex), gestureName,
-                lookUpGestureIDWithName(gestureSlots[0], gestureType: "00"),
-                lookUpGestureIDWithName(gestureSlots[1], gestureType: "00"),
-                lookUpGestureIDWithName(gestureSlots[2], gestureType: "00"),
-                lookUpGestureIDWithName(gestureSlots[3], gestureType: "00"),
-                lookUpGestureIDWithName(gestureSlots[4], gestureType: "00"),])
+            print(customGestures)
+            customGestures.append([getNextAvailableID(customGestures), gestureName,
+                getGestureIDWithName(gestureSlots[0], gestureType: "00"),
+                getGestureIDWithName(gestureSlots[1], gestureType: "00"),
+                getGestureIDWithName(gestureSlots[2], gestureType: "00"),
+                getGestureIDWithName(gestureSlots[3], gestureType: "00"),
+                getGestureIDWithName(gestureSlots[4], gestureType: "00"),])
+            print(customGestures)
         } else {
             customGestures[gestureID][1] = gestureName
-            customGestures[gestureID][2] = lookUpGestureIDWithName(gestureSlots[0], gestureType: "00")
-            customGestures[gestureID][3] = lookUpGestureIDWithName(gestureSlots[1], gestureType: "00")
-            customGestures[gestureID][4] = lookUpGestureIDWithName(gestureSlots[2], gestureType: "00")
-            customGestures[gestureID][5] = lookUpGestureIDWithName(gestureSlots[3], gestureType: "00")
-            customGestures[gestureID][6] = lookUpGestureIDWithName(gestureSlots[4], gestureType: "00")
+            customGestures[gestureID][2] = getGestureIDWithName(gestureSlots[0], gestureType: "00")
+            customGestures[gestureID][3] = getGestureIDWithName(gestureSlots[1], gestureType: "00")
+            customGestures[gestureID][4] = getGestureIDWithName(gestureSlots[2], gestureType: "00")
+            customGestures[gestureID][5] = getGestureIDWithName(gestureSlots[3], gestureType: "00")
+            customGestures[gestureID][6] = getGestureIDWithName(gestureSlots[4], gestureType: "00")
         }
         
         performSegueWithIdentifier("unwindToGestures", sender: sender)

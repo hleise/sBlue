@@ -5,7 +5,7 @@
 //  Created by Hunter Leise on 8/4/16.
 //  Copyright © 2016 Vivo Applications. All rights reserved.
 //
-
+    
 import Foundation
     
 // commandName | commandID
@@ -59,7 +59,7 @@ var links : [[String]] = [["00", "00", "01", "00"],
 
 
 
-func lookUpGestureIDWithName(gestureName: String, gestureType: String) -> String {
+func getGestureIDWithName(gestureName: String, gestureType: String) -> String {
     
     if gestureType == "00" {
         for gesture in defaultGestures {
@@ -81,7 +81,7 @@ func lookUpGestureIDWithName(gestureName: String, gestureType: String) -> String
 
 
 
-func lookUpContactIDWithName(contactName: String) -> String {
+func getContactIDWithName(contactName: String) -> String {
     
     for i in 0..<contacts.count {
         if contacts[i][2] == contactName {
@@ -93,7 +93,7 @@ func lookUpContactIDWithName(contactName: String) -> String {
 }
 
 
-func lookUpAppIDWithName(appName: String) -> String {
+func getAppIDWithName(appName: String) -> String {
     
     for i in 0..<apps.count {
         if apps[i][1] == appName {
@@ -105,7 +105,7 @@ func lookUpAppIDWithName(appName: String) -> String {
 }
 
 
-func lookUpGestureNameWithID(gestureID: String, gestureType: String) -> String {
+func getGestureNameWithID(gestureID: String, gestureType: String) -> String {
     
     if gestureType == "00" {
         for i in 0..<defaultGestures.count {
@@ -125,7 +125,7 @@ func lookUpGestureNameWithID(gestureID: String, gestureType: String) -> String {
 }
 
 
-func lookUpContactNameWithID(contactID: String) -> String {
+func getContactNameWithID(contactID: String) -> String {
     
     for i in 0..<contacts.count {
         if contacts[i][0] == contactID {
@@ -137,7 +137,7 @@ func lookUpContactNameWithID(contactID: String) -> String {
 }
 
 
-func lookUpAppNameWithID(appID: String) -> String {
+func getAppNameWithID(appID: String) -> String {
     
     for i in 0..<apps.count {
         if apps[i][0] == appID {
@@ -148,7 +148,7 @@ func lookUpAppNameWithID(appID: String) -> String {
     return ""
 }
 
-func looUpGestureTypeWithName(gestureName: String) -> String {
+func getGestureTypeWithName(gestureName: String) -> String {
     for gesture in defaultGestures {
         if gestureName == gesture[1] {
             return "00"
@@ -165,6 +165,29 @@ func looUpGestureTypeWithName(gestureName: String) -> String {
     return "FF"
 }
 
+func getContactIndexWithContactID(contactID: String) -> Int {
+    for i in 0..<contacts.count {
+        if contacts[i][0] == contactID {
+            return i
+        }
+    }
+    precondition(true, "Contact index not found")
+    return -1
+}
+
+func getNextAvailableID(table: [[String]]) -> String {
+    var availableIDs = Set([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+    for element in table {
+        if let elementID = Int(element[0]) {
+            if availableIDs.contains(elementID) {
+                availableIDs.remove(elementID)
+            }
+        } else {
+            precondition(true, "Element id is nil")
+        }
+    }
+    return "0" + String(availableIDs.minElement()!)
+}
 
 func deleteGesture(gestureName: String, gestureType: String) -> String {
     
@@ -175,9 +198,9 @@ func deleteGesture(gestureName: String, gestureType: String) -> String {
     }
     
     if gestureType == "default" {
-        code += lookUpGestureIDWithName(gestureName, gestureType: "00")
+        code += getGestureIDWithName(gestureName, gestureType: "00")
     } else {
-        code += lookUpGestureIDWithName(gestureName, gestureType: "01")
+        code += getGestureIDWithName(gestureName, gestureType: "01")
 
     }
     
@@ -185,20 +208,3 @@ func deleteGesture(gestureName: String, gestureType: String) -> String {
     
     return code
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

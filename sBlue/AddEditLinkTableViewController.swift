@@ -12,9 +12,9 @@ class AddEditLinkTableViewController: UITableViewController, AppsTableViewDelega
     
     var linkTableViewControllerType = String()
     var linkID = Int()
-    var app = String()
-    var contact = String()
-    var gesture = String()
+    var app = "None"
+    var contact = "None"
+    var gesture = "None"
     
     @IBOutlet weak var appNameLabel: UILabel!
     @IBOutlet weak var contactNameLabel: UILabel!
@@ -26,24 +26,24 @@ class AddEditLinkTableViewController: UITableViewController, AppsTableViewDelega
     @IBAction func unwindToAddEditLink(segue: UIStoryboardSegue) {}
     
     @IBAction func deleteLink(sender: AnyObject) {
-        contacts.removeAtIndex(Int(links[linkID][1])!)
+        contacts.removeAtIndex(getContactIndexWithContactID(links[linkID][1]))
         links.removeAtIndex(linkID)
     }
     
     @IBAction func saveLink(sender: AnyObject) {
         precondition(barButtonRight.title == "Done" || barButtonRight.title == "Save", "barButtonRight item \(barButtonRight.title) not recognized.")
         
-        let contactID = String(contacts.endIndex)
-        let gestureType = looUpGestureTypeWithName(gesture)
+        let contactID = getNextAvailableID(contacts)
+        let gestureType = getGestureTypeWithName(gesture)
         
         if (barButtonRight.title == "Save") {
-            contacts.append([contactID, lookUpAppIDWithName(app), contact])
-            links.append([String(links.endIndex), contactID, gestureType, lookUpGestureIDWithName(gesture, gestureType: gestureType)])
+            contacts.append([contactID, getAppIDWithName(app), contact])
+            links.append([getNextAvailableID(links), contactID, gestureType, getGestureIDWithName(gesture, gestureType: gestureType)])
         } else {
-            contacts[Int(links[linkID][1])!][1] = lookUpAppIDWithName(app)
+            contacts[Int(links[linkID][1])!][1] = getAppIDWithName(app)
             contacts[Int(links[linkID][1])!][2] = contact
             links[linkID][2] = gestureType
-            links[linkID][3] = lookUpGestureIDWithName(gesture, gestureType: gestureType)
+            links[linkID][3] = getGestureIDWithName(gesture, gestureType: gestureType)
         }
         
         performSegueWithIdentifier("unwindToGestures", sender: sender)
