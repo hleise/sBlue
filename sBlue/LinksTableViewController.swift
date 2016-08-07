@@ -122,7 +122,7 @@ class LinksTableViewController: UITableViewController {
     // Determines what to do when the user swipes left on a cell and selects delete
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
          if editingStyle == .Delete {
-            contacts.removeAtIndex(lookUpContactIndexWithContactID(links[indexPath.row][1]))
+            contacts.removeAtIndex(getContactIndexWithContactID(links[indexPath.row][1]))
             links.removeAtIndex(indexPath.row)
             tableView.reloadData()
          }
