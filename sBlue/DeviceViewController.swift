@@ -16,7 +16,7 @@ class DeviceViewController: UIViewController {
     @IBOutlet weak var connectionLabel: UIBarButtonItem!
     
     @IBAction func sendSomething(sender: UIBarButtonItem) {
-        sendCode("00")
+        sendCode("00", 1)
     }
     
     var timerTXDelay: NSTimer?
@@ -88,14 +88,14 @@ class DeviceViewController: UIViewController {
     }
     
     // Valid position range: 0 to 180
-    func sendCode(code: String) {
+    func sendCode(code: String, characteristic: Int) {
         if !allowTX {
             return
         }
         
         // Send code to BLE Shield (if service exists and is connected)
         if let bleService = btDiscoverySharedInstance.bleService {
-            bleService.writeCode(code)
+            bleService.writeCode(code, characteristic)
             
             // Start delay timer
             allowTX = false

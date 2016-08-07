@@ -123,12 +123,13 @@ class BTService: NSObject, CBPeripheralDelegate {
       
     // Mark: - Private
       
-    func writeCode(code: String) {
+    func writeCode(code: String, characteristic: Int) {
         print("writeposition: \(code)")
         // See if characteristic has been discovered before writing to it
         if chosenCharacteristic != nil {
             //this is the current characteristic
-            if let blueCharacteristic = self.blueCharacteristics[chosenCharacteristic!] {
+            
+            if let blueCharacteristic = self.blueCharacteristics[characteristic] {
                 // Need a mutable var to pass to writeValue function
                 //little endian
 
