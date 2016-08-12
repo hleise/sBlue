@@ -26,6 +26,7 @@ class AddEditGestureTableViewController: UITableViewController, DefaultGesturesS
     @IBOutlet weak var gesture5Label: UILabel!
     
     @IBAction func deleteLink(sender: AnyObject) {
+        //use getNextAvailableID and set the rows to FFs
         customGestures.removeAtIndex(gestureID)
     }
     
@@ -40,6 +41,7 @@ class AddEditGestureTableViewController: UITableViewController, DefaultGesturesS
         
         if (barButtonRight.title == "Save") {
             print(customGestures)
+            //use getNextAvailableID and set that row
             customGestures.append([getNextAvailableID(customGestures), gestureName,
                 getGestureIDWithName(gestureSlots[0], gestureType: "00"),
                 getGestureIDWithName(gestureSlots[1], gestureType: "00"),

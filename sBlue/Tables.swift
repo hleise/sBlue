@@ -27,7 +27,7 @@ var defaultGestures : [[String]] = [["00", "Blink"],
 
 
 //gesture slots, not gesture types, fill the rest with FFs
-// gestureID | gestureName | gesture1 | gesture2 | gesture3 | gesture4 | gesture5 
+                        // gestureID | gestureName | gesture1 | gesture2 | gesture3 | gesture4 | gesture5
 var customGestures : [[String]] = [["00", "Dancing", "00", "FF", "FF", "FF", "FF"],
                                    ["01", "Walking", "01", "03", "FF", "FF", "FF"],
                                    ["02", "Party", "01", "02", "FF", "FF", "FF"],
@@ -35,7 +35,7 @@ var customGestures : [[String]] = [["00", "Dancing", "00", "FF", "FF", "FF", "FF
                                    ["04", "Wag Tail", "01", "03", "FF", "FF", "FF"],
                                    ["05", "Cry", "01", "02", "FF", "FF", "FF"]]
 
-// appID | appName | appIdentifier
+                        // appID | appName | appIdentifier
 var apps : [[String]] = [["00", "Whatsapp", "com.whatsapp"],
                          ["01", "Facebook", "com.facebook"],
                          ["02", "Messenger", "com.messenger"],
@@ -45,18 +45,43 @@ var apps : [[String]] = [["00", "Whatsapp", "com.whatsapp"],
                          ["06", "Messages", "com.messages"],
                          ["07", "Twitter", "com.twitter"]]
 
-// contactID | appID | contactName
-var contacts : [[String]] = [["00", "01", "Hunter Leise"],
-                             ["01", "07", "@andresrubiop"],
-                             ["02", "07", "@ViveFaux"]]
+                        // contactID | appID | contactName
+var contacts : [[String]] = [["00", "00", "Andres Rubio"],
+                             ["01", "02", "Andrés Rubio Proaño"],
+                             ["02", "02", "Hunter Leise"],
+                             ["03", "07", "@andresrubiop"],
+                             ["04", "07", "@ViveFaux"],
+                             ["05", "07", "@sinnplyblue"],
+                             ["06", "00", "Dani Canizares"],
+                             ["07", "03", "ADCanizares"],
+                             ["08", "01", "Andrés Rubio Proaño"]]
 
 //gestureType 01 = custom
 //00 default
-// linkID | contactID | gestureType | gestureID
-var links : [[String]] = [["00", "00", "01", "00"],
-                          ["01", "01", "01", "01"],
-                          ["02", "02", "00", "08"]]
+                // linkID | contactID | gestureType | gestureID
+var links : [[String]] = [["00", "00", "00", "00"],
+                          ["01", "01", "00", "01"],
+                          ["02", "02", "00", "02"],
+                          ["03", "03", "00", "03"],
+                          ["04", "04", "00", "04"],
+                          ["05", "05", "00", "05"],
+                          ["06", "06", "00", "06"],
+                          ["07", "07", "00", "07"],
+                          ["08", "08", "00", "08"]]
 
+
+
+func getLinkIDWithContactID(contactID: String) -> String {
+    
+    for i in 0..<links.count {
+        if links[i][1] == contactID {
+            return links[i][0]
+        }
+    }
+    
+    return "FF"
+    
+}
 
 
 func getGestureIDWithName(gestureName: String, gestureType: String) -> String {
@@ -189,22 +214,8 @@ func getNextAvailableID(table: [[String]]) -> String {
     return "0" + String(availableIDs.minElement()!)
 }
 
-func deleteGesture(gestureName: String, gestureType: String) -> String {
-    
-    var code = ""
-    
-    if let command = commands["clear"] {
-        code = command
-    }
-    
-    if gestureType == "default" {
-        code += getGestureIDWithName(gestureName, gestureType: "00")
-    } else {
-        code += getGestureIDWithName(gestureName, gestureType: "01")
 
-    }
-    
-    code += "FFFF"
-    
-    return code
-}
+
+
+
+

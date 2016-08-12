@@ -8,7 +8,21 @@
 
 import UIKit
 
+protocol deleteLinkDelegate : class {
+    func deleteLink(appName: String, contactName: String, gestureName: String)
+}
+
+protocol saveLinkDelegate : class {
+    func newLink(appName: String, contactName: String, gestureName: String)
+}
+
+
 class AddEditLinkTableViewController: UITableViewController, AppsTableViewDelegate, ContactTableViewDelegate, GestureTableViewDelegate {
+    
+    weak var linkDeleteDelegate : deleteLinkDelegate?
+    
+    weak var linkSaveDelegate : saveLinkDelegate?
+    
     
     var linkTableViewControllerType = String()
     var linkID = Int()
@@ -26,8 +40,10 @@ class AddEditLinkTableViewController: UITableViewController, AppsTableViewDelega
     @IBAction func unwindToAddEditLink(segue: UIStoryboardSegue) {}
     
     @IBAction func deleteLink(sender: AnyObject) {
+        //use getNextAvailableID and set the rows to FFs
         contacts.removeAtIndex(getContactIndexWithContactID(links[linkID][1]))
         links.removeAtIndex(linkID)
+        linkDeleteDelegate?.deleteLink(app, contactName: contact, gestureName: gesture)
     }
     
     @IBAction func saveLink(sender: AnyObject) {
@@ -37,13 +53,17 @@ class AddEditLinkTableViewController: UITableViewController, AppsTableViewDelega
         let gestureType = getGestureTypeWithName(gesture)
         
         if (barButtonRight.title == "Save") {
+            //use getNextAvailableID and set that row
             contacts.append([contactID, getAppIDWithName(app), contact])
             links.append([getNextAvailableID(links), contactID, gestureType, getGestureIDWithName(gesture, gestureType: gestureType)])
+            linkSaveDelegate?.newLink(app, contactName: contact, gestureName: gesture)
+            
         } else {
             contacts[Int(links[linkID][1])!][1] = getAppIDWithName(app)
             contacts[Int(links[linkID][1])!][2] = contact
             links[linkID][2] = gestureType
             links[linkID][3] = getGestureIDWithName(gesture, gestureType: gestureType)
+            linkSaveDelegate?.newLink(app, contactName: contact, gestureName: gesture)
         }
         
         performSegueWithIdentifier("unwindToGestures", sender: sender)

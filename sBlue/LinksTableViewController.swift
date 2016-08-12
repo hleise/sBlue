@@ -21,6 +21,8 @@ class LinksTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
+    
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
@@ -134,9 +136,13 @@ class LinksTableViewController: UITableViewController {
         if (segue.identifier == "toAddLink") {
             let destination = segue.destinationViewController as! AddEditLinkTableViewController
             destination.linkTableViewControllerType = "Add Link"
+            destination.linkSaveDelegate = self.parentViewController as? saveLinkDelegate
+            destination.linkDeleteDelegate = self.parentViewController as? deleteLinkDelegate
         } else {
             let destination = segue.destinationViewController as! AddEditLinkTableViewController
             destination.linkTableViewControllerType = "Edit Link"
+            destination.linkSaveDelegate = self.parentViewController as? saveLinkDelegate
+            destination.linkDeleteDelegate = self.parentViewController as? deleteLinkDelegate
             
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 destination.linkID = indexPath.row as Int
